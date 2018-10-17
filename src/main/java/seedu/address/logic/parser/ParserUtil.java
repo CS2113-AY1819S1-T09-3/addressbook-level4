@@ -12,6 +12,7 @@ import java.util.Set;
 import seedu.address.commons.core.index.Index;
 import seedu.address.commons.util.StringUtil;
 import seedu.address.logic.parser.exceptions.ParseException;
+import seedu.address.model.item.Item;
 import seedu.address.model.ledger.Account;
 import seedu.address.model.ledger.DateLedger;
 import seedu.address.model.person.Address;
@@ -125,6 +126,15 @@ public class ParserUtil {
             tagSet.add(parseTag(tagName));
         }
         return tagSet;
+    }
+
+    /**
+     * Parses {@code String item} into a {@code Item}
+     */
+    public static Item parseItem(String item) throws ParseException {
+        requireNonNull(item);
+        String trimmedItem = item.trim();
+        return new Item(trimmedItem);
     }
 
     /**

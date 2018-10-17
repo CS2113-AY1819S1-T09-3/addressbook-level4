@@ -3,6 +3,7 @@ package seedu.address.model;
 import java.util.function.Predicate;
 
 import javafx.collections.ObservableList;
+import seedu.address.model.item.Item;
 import seedu.address.model.ledger.Account;
 import seedu.address.model.ledger.Ledger;
 import seedu.address.model.person.Person;
@@ -104,4 +105,16 @@ public interface Model {
      * Saves the current address book state for undo/redo.
      */
     void commitAddressBook();
+
+    /**
+     * Adds the given item.
+     * @param item
+     */
+    void addItem(Item item);
+
+    /**
+     * Deletes the given item.
+     * @param item
+     */
+    void deleteItem(Item item);
 }
