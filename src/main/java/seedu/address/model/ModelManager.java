@@ -12,6 +12,7 @@ import javafx.collections.transformation.FilteredList;
 import seedu.address.commons.core.ComponentManager;
 import seedu.address.commons.core.LogsCenter;
 import seedu.address.commons.events.model.AddressBookChangedEvent;
+import seedu.address.model.item.Item;
 import seedu.address.model.ledger.Account;
 import seedu.address.model.ledger.Ledger;
 import seedu.address.model.person.Person;
@@ -26,6 +27,8 @@ public class ModelManager extends ComponentManager implements Model {
     private final VersionedAddressBook versionedAddressBook;
     private final FilteredList<Person> filteredPersons;
 
+    private final FilteredList<Ledger> filteredLedgers;
+
     /**
      * Initializes a ModelManager with the given addressBook and userPrefs.
      */
@@ -37,6 +40,8 @@ public class ModelManager extends ComponentManager implements Model {
 
         versionedAddressBook = new VersionedAddressBook(addressBook);
         filteredPersons = new FilteredList<>(versionedAddressBook.getPersonList());
+
+        filteredLedgers = new FilteredList<>(versionedAddressBook.getLedgerList());
     }
 
     public ModelManager() {
@@ -84,13 +89,22 @@ public class ModelManager extends ComponentManager implements Model {
     }
 
     @Override
-    public void addLedger(Ledger ledger) {
+    public boolean hasLedger (Ledger ledger) {
+        requireAllNonNull(ledger);
+        return versionedAddressBook.hasLedger(ledger);
+    }
 
+    @Override
+    public void addLedger(Ledger ledger) {
+        requireNonNull(ledger);
+        versionedAddressBook.addLedger(ledger);
+        updateFilteredLedgerList(PREDICATE_SHOW_ALL_LEDGERS);
+        indicateAddressBookChanged();
     }
 
     @Override
     public void deleteLedger(Ledger ledger) {
-
+        versionedAddressBook.removeLedger(ledger);
     }
 
     @Override
@@ -106,8 +120,14 @@ public class ModelManager extends ComponentManager implements Model {
     @Override
     public void updatePerson(Person target, Person editedPerson) {
         requireAllNonNull(target, editedPerson);
-
         versionedAddressBook.updatePerson(target, editedPerson);
+        indicateAddressBookChanged();
+    }
+
+    @Override
+    public void updateLedger(Ledger target, Ledger editedLedger) {
+        requireAllNonNull(target, editedLedger);
+        versionedAddressBook.updateLedger(target, editedLedger);
         indicateAddressBookChanged();
     }
 
@@ -123,9 +143,25 @@ public class ModelManager extends ComponentManager implements Model {
     }
 
     @Override
+    public ObservableList<Ledger> getFilteredLedgerList() {
+        logger.info("Filtered list observed");
+        logger.info("Size : " + Integer.toString(filteredLedgers.size()));
+        for (Ledger l : filteredLedgers) {
+            logger.info(l.getDateLedger().toString());
+        }
+        return FXCollections.unmodifiableObservableList(filteredLedgers);
+    }
+
+    @Override
     public void updateFilteredPersonList(Predicate<Person> predicate) {
         requireNonNull(predicate);
         filteredPersons.setPredicate(predicate);
+    }
+
+    @Override
+    public void updateFilteredLedgerList(Predicate<Ledger> predicate) {
+        requireNonNull(predicate);
+        filteredLedgers.setPredicate(predicate);
     }
 
     //=========== Undo/Redo =================================================================================
@@ -155,6 +191,28 @@ public class ModelManager extends ComponentManager implements Model {
     @Override
     public void commitAddressBook() {
         versionedAddressBook.commit();
+    }
+
+    @Override
+    public void addItem(Item item) {
+
+    }
+
+    @Override
+    public void deleteItem(Item item) {
+
+    }
+
+    @Override
+    public void undoAllAddressBook() {
+        versionedAddressBook.undoAll();
+        indicateAddressBookChanged();
+    }
+
+    @Override
+    public void redoAllAddressBook() {
+        versionedAddressBook.redoAll();
+        indicateAddressBookChanged();
     }
 
     @Override

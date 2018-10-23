@@ -1,5 +1,9 @@
 package seedu.address.model.ledger;
 
+import seedu.address.commons.core.LogsCenter;
+
+import java.util.logging.Logger;
+
 import static seedu.address.commons.util.CollectionUtil.requireAllNonNull;
 
 /**
@@ -7,23 +11,35 @@ import static seedu.address.commons.util.CollectionUtil.requireAllNonNull;
  */
 
 public class Ledger {
-    //private final Account account;
+
+    private final Logger logger = LogsCenter.getLogger(Ledger.class);
+
+    private final Account account;
     private final DateLedger dateLedger;
 
-    public Ledger(DateLedger dateLedger) {
+    public Ledger(DateLedger dateLedger, Account account) {
         requireAllNonNull(dateLedger);
-        //this.account = account;
+        this.account = account;
         this.dateLedger = dateLedger;
     }
 
-    /*
     public Account getAccount() {
         return account;
     }
-    */
 
     public DateLedger getDateLedger() {
         return dateLedger;
+    }
+
+    /**
+     * Returns true if both ledgers have the same date.
+     */
+    public boolean isSameLedger(Ledger otherLedger) {
+        if (otherLedger.getDateLedger().getDate().equals(this.getDateLedger().getDate())) {
+            logger.info("Same ledger");
+            return true;
+        }
+        return false;
     }
 
 }
