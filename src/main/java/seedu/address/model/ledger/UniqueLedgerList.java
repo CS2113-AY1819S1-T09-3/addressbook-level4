@@ -4,9 +4,6 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import seedu.address.model.ledger.exceptions.DuplicateLedgerException;
 import seedu.address.model.ledger.exceptions.LedgerNotFoundException;
-import seedu.address.model.person.Person;
-import seedu.address.model.person.exceptions.DuplicatePersonException;
-import seedu.address.model.person.exceptions.PersonNotFoundException;
 
 import java.util.Iterator;
 import java.util.List;
@@ -37,7 +34,7 @@ public class UniqueLedgerList implements Iterable<Ledger> {
 
         /*
         for (int i = 0; i < internalList.size(); i++) {
-            if (toCheck.getDateLedger().getDate().equals(internalList.get(i).getDateLedger().getDate())) {
+            if (toCheck.getDateLedger().getEventDate().equals(internalList.get(i).getDateLedger().getEventDate())) {
                 return true;
             }
         }

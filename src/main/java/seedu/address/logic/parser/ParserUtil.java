@@ -2,13 +2,12 @@ package seedu.address.logic.parser;
 
 import static java.util.Objects.requireNonNull;
 
-import java.text.DateFormat;
 import java.text.DecimalFormat;
-import java.text.SimpleDateFormat;
 import java.util.Collection;
 import java.util.HashSet;
 import java.util.Set;
 
+import javax.print.DocFlavor;
 import seedu.address.commons.core.index.Index;
 import seedu.address.commons.util.StringUtil;
 import seedu.address.logic.parser.exceptions.ParseException;
@@ -22,6 +21,8 @@ import seedu.address.model.person.Phone;
 import seedu.address.model.tag.Tag;
 import seedu.address.model.Events.Venue;
 import seedu.address.model.Events.Description;
+import seedu.address.model.Events.EventName;
+import seedu.address.model.Events.EventDate;
 
 /**
  * Contains utility methods used for parsing strings in the various *Parser classes.
@@ -44,18 +45,18 @@ public class ParserUtil {
     }
 
     /**
-     * Parses a {@code String name} into a {@code Name}.
+     * Parses a {@code String name} into a {@code EventName}.
      * Leading and trailing whitespaces will be trimmed.
      *
      * @throws ParseException if the given {@code name} is invalid.
      */
-    public static Name parseName(String name) throws ParseException {
+    public static EventName parseEventName(String name) throws ParseException {
         requireNonNull(name);
         String trimmedName = name.trim();
-        if (!Name.isValidName(trimmedName)) {
-            throw new ParseException(Name.MESSAGE_NAME_CONSTRAINTS);
+        if (!EventName.CheckValid(trimmedName)) {
+            throw new ParseException(EventName.MESSAGE_EVENTNAME_CONSTRAINTS);
         }
-        return new Name(trimmedName);
+        return new EventName(trimmedName);
     }
 
     /**
@@ -87,6 +88,37 @@ public class ParserUtil {
         }
         return new Description(trimmedDescription);
     }
+
+    /**
+     * Parses a {@code String name} into a {@code Name}.
+     * Leading and trailing whitespaces will be trimmed.
+     *
+     * @throws ParseException if the given {@code name} is invalid.
+     */
+    public static Name parseName(String name) throws ParseException {
+        requireNonNull(name);
+        String trimmedName = name.trim();
+        if (!Name.isValidName(trimmedName)) {
+            throw new ParseException(Name.MESSAGE_NAME_CONSTRAINTS);
+        }
+        return new Name(trimmedName);
+    }
+
+    /**
+     * Parses a {@code String date} into a {@code EventDate}.
+     * Leading and trailing whitespaces will be trimmed.
+     *
+     * @throws ParseException if the given {@code EventDate} is invalid.
+     */
+    public static EventDate parserEventDate(String date) throws ParseException {
+            requireNonNull(date);
+            String trimmedDate = date.trim();
+            if(!EventDate.CheckValid(trimmedDate)) {
+                throw new  ParseException(EventDate.MESSAGE_EVENTDATE_CONSTRAINTS);
+            }
+            return new EventDate(trimmedDate);
+    }
+
     /**
      * Parses a {@code String phone} into a {@code Phone}.
      * Leading and trailing whitespaces will be trimmed.
@@ -201,4 +233,5 @@ public class ParserUtil {
         }
         return new DateLedger(trimmedDate);
     }
+
 }

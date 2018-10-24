@@ -3,14 +3,14 @@ package seedu.address.model.Events;
 import static java.util.Objects.requireNonNull;
 import static seedu.address.commons.util.AppUtil.checkArgument;
 
-public class Name {
+public class EventName {
     public final String ThisName;
     public static final String NAME_VALIDATION_REGEX = "[\\p{Alnum}][\\p{Alnum} ]*";
-    public static final String MESSAGE_NAME =
+    public static final String MESSAGE_EVENTNAME_CONSTRAINTS =
             "Names should only contain alphanumeric characters and spaces, and it should not be blank";
-    public Name(String name){
+    public EventName(String name){
         requireNonNull(name);
-        checkArgument(CheckValid(name), MESSAGE_NAME);
+        checkArgument(CheckValid(name), MESSAGE_EVENTNAME_CONSTRAINTS);
         ThisName= name;
     }
     public static boolean CheckValid(String name){
@@ -22,7 +22,7 @@ public class Name {
     }
     public boolean equals(Object other) {
         return other == this // short circuit if same object
-                || (other instanceof Name // instanceof handles nulls
-                && ThisName.equals(((Name) other).ThisName)); // state check
+                || (other instanceof EventName // instanceof handles nulls
+                && ThisName.equals(((EventName) other).ThisName)); // state check
     }
 }

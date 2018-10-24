@@ -1,3 +1,5 @@
+
+
 package seedu.address.logic.commands.EventCommand;
 
 import static java.util.Objects.requireNonNull;
@@ -37,8 +39,7 @@ public class AddEventCommand extends Command {
     @Override
     public boolean equals(Object other) {
         return other == this // short circuit if same object
-                || (other instanceof AddCommand // instanceof handles nulls
-                && NewEvent.equals(((AddCommand) other).NewEvent));
+                || (other instanceof AddEventCommand // instanceof handles nulls
+                && NewEvent.equals(((AddEventCommand) other).NewEvent));
     }
 }
-

@@ -1,4 +1,4 @@
 package seedu.address.model.Events.exceptions;
 
-public class EventNotfoundException {
+public class EventNotFoundException extends RuntimeException {
 }
