@@ -1,4 +1,4 @@
 package seedu.address.model.Events;
 
-public class Date {
+public class UniqueEventList {
 }

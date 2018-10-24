@@ -10,8 +10,8 @@ public class Name {
             "Names should only contain alphanumeric characters and spaces, and it should not be blank";
     public Name(String name){
         requireNonNull(name);
-        checkArgument(CheckValid(name),MESSAGE_NAME);
-        ThisName=name;
+        checkArgument(CheckValid(name), MESSAGE_NAME);
+        ThisName= name;
     }
     public static boolean CheckValid(String name){
         return name.matches(NAME_VALIDATION_REGEX);
@@ -20,7 +20,9 @@ public class Name {
     public String toString() {
         return ThisName;
     }
-    public static Boolean Checkqual(String name, String other){
-        return (name==other);
+    public boolean equals(Object other) {
+        return other == this // short circuit if same object
+                || (other instanceof Name // instanceof handles nulls
+                && ThisName.equals(((Name) other).ThisName)); // state check
     }
 }
