@@ -89,7 +89,9 @@ public class UniqueEventList implements Iterable<Event> {
         return true;
     }
 
-
+    public ObservableList<Event> asUnmodifiableObservableList() {
+        return FXCollections.unmodifiableObservableList(internalList);
+    }
     @Override
     public Iterator<Event> iterator() {
         return internalList.iterator();

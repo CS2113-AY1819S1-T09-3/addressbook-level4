@@ -8,11 +8,11 @@ import javafx.scene.layout.Region;
 import seedu.address.model.Events.Event;
 
 /**
- * An UI component that displays information of a {@code Person}.
+ * An UI component that displays information of a {@code Event}.
  */
 public class EventCard extends UiPart<Region> {
 
-    private static final String FXML = "PersonListCard.fxml";
+    private static final String FXML = "EventListCard.fxml";
 
     /**
      * Note: Certain keywords such as "location" and "resources" are reserved keywords in JavaFX.
@@ -25,11 +25,11 @@ public class EventCard extends UiPart<Region> {
     public final Event event;
 
     @FXML
-    private HBox cardPane;
+    private HBox cardPaneEvent;
     @FXML
-    private Label EventName;
+    private Label name;
     @FXML
-    private Label EventDate;
+    private Label date;
     @FXML
     private Label description;
     @FXML
@@ -43,8 +43,8 @@ public class EventCard extends UiPart<Region> {
         super(FXML);
         this.event = event;
         id.setText(displayedIndex + ". ");
-        EventName.setText(event.getEventName().ThisName);
-        EventDate.setText(event.getEventDate().ThisDate);
+        name.setText(event.getEventName().ThisName);
+        date.setText(event.getEventDate().ThisDate);
         description.setText(event.getDescription().ThisDescription);
         venue.setText(event.getVenue().ThisVenue);
         event.getTags().forEach(tag -> tags.getChildren().add(new Label(tag.tagName)));
@@ -58,7 +58,7 @@ public class EventCard extends UiPart<Region> {
         }
 
         // instanceof handles nulls
-        if (!(other instanceof PersonCard)) {
+        if (!(other instanceof EventCard)) {
             return false;
         }
 

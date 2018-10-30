@@ -4,8 +4,10 @@ import javafx.collections.ObservableList;
 import seedu.address.logic.commands.CommandResult;
 import seedu.address.logic.commands.exceptions.CommandException;
 import seedu.address.logic.parser.exceptions.ParseException;
+
+import seedu.address.model.Events.Event;
 import seedu.address.model.ledger.Ledger;
-import seedu.address.model.person.Person;
+import seedu.address.model.member.Person;
 
 /**
  * API of the Logic component
@@ -28,4 +30,6 @@ public interface Logic {
 
     /** Returns the list of input entered by the user, encapsulated in a {@code ListElementPointer} object */
     ListElementPointer getHistorySnapshot();
+
+    ObservableList<Event> getFilteredEventList();
 }

@@ -23,8 +23,10 @@ import org.junit.rules.ExpectedException;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import seedu.address.model.person.Person;
-import seedu.address.model.person.exceptions.DuplicatePersonException;
+import seedu.address.model.Events.Event;
+import seedu.address.model.ledger.Ledger;
+import seedu.address.model.member.Person;
+import seedu.address.model.member.exceptions.DuplicatePersonException;
 import seedu.address.model.tag.Tag;
 import seedu.address.testutil.AddressBookBuilder;
 import seedu.address.testutil.PersonBuilder;
@@ -130,6 +132,16 @@ public class AddressBookTest {
         @Override
         public ObservableList<Person> getPersonList() {
             return persons;
+        }
+
+        @Override
+        public ObservableList<Event> getEventList() {
+            return null;
+        }
+
+        @Override
+        public ObservableList<Ledger> getLedgerList() {
+            return null;
         }
     }
 

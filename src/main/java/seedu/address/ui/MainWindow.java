@@ -27,6 +27,8 @@ public class MainWindow extends UiPart<Stage> {
 
     private static final String FXML = "MainWindow.fxml";
 
+    //private final Logger logger = LogsCenter.getLogger(MainWindow.class);
+
     private final Logger logger = LogsCenter.getLogger(getClass());
 
     private Stage primaryStage;
@@ -36,6 +38,7 @@ public class MainWindow extends UiPart<Stage> {
     private BrowserPanel browserPanel;
     private PersonListPanel personListPanel;
     private LedgerListPanel ledgerListPanel;
+    private EventListPanel eventListPanel;
     private Config config;
     private UserPrefs prefs;
     private HelpWindow helpWindow;
@@ -51,6 +54,9 @@ public class MainWindow extends UiPart<Stage> {
 
     @FXML
     private StackPane personListPanelPlaceholder;
+
+    @FXML
+    private StackPane eventListPanelPlaceHolder;
 
     @FXML
     private StackPane ledgerListPanelPlaceholder;
@@ -121,12 +127,19 @@ public class MainWindow extends UiPart<Stage> {
     /**
      * Fills up all the placeholders of this window.
      */
-    void fillInnerParts() {
+    void fillInnerParts() { ;
         browserPanel = new BrowserPanel();
         browserPlaceholder.getChildren().add(browserPanel.getRoot());
 
         personListPanel = new PersonListPanel(logic.getFilteredPersonList());
         personListPanelPlaceholder.getChildren().add(personListPanel.getRoot());
+
+        logger.info("addd person list");
+
+        eventListPanel = new EventListPanel(logic.getFilteredEventList());
+        eventListPanelPlaceHolder.getChildren().add(eventListPanel.getRoot());
+
+        logger.info("added eventPanel");
 
         ledgerListPanel = new LedgerListPanel(logic.getFilteredLedgerList());
         ledgerListPanelPlaceholder.getChildren().add(ledgerListPanel.getRoot());
@@ -200,6 +213,8 @@ public class MainWindow extends UiPart<Stage> {
     public LedgerListPanel getLedgerListPanel() {
         return ledgerListPanel;
     }
+
+    public  EventListPanel getEventListPanel() {return eventListPanel;}
 
     void releaseResources() {
         browserPanel.freeResources();
