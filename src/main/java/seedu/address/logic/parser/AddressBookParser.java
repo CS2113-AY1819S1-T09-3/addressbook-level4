@@ -16,7 +16,7 @@ import seedu.address.logic.parser.ledger.AddLedgerCommandParser;
 import seedu.address.logic.parser.ledger.CreditCommandParser;
 import seedu.address.logic.parser.ledger.DebitCommandParser;
 import seedu.address.logic.parser.event.AddEventCommandParser;
-
+import seedu.address.model.Model;
 
 import java.util.logging.Logger;
 import java.util.regex.Matcher;

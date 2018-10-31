@@ -56,7 +56,7 @@ public class MainWindow extends UiPart<Stage> {
     private StackPane personListPanelPlaceholder;
 
     @FXML
-    private StackPane eventListPanelPlaceHolder;
+    private StackPane eventListPanelPlaceholder;
 
     @FXML
     private StackPane ledgerListPanelPlaceholder;
@@ -137,7 +137,7 @@ public class MainWindow extends UiPart<Stage> {
         logger.info("addd person list");
 
         eventListPanel = new EventListPanel(logic.getFilteredEventList());
-        eventListPanelPlaceHolder.getChildren().add(eventListPanel.getRoot());
+        eventListPanelPlaceholder.getChildren().add(eventListPanel.getRoot());
 
         logger.info("added eventPanel");
 

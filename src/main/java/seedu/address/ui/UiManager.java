@@ -52,8 +52,11 @@ public class UiManager extends ComponentManager implements Ui {
         primaryStage.getIcons().add(getImage(ICON_APPLICATION));
 
         try {
+            logger.info("instantiating new window");
             mainWindow = new MainWindow(primaryStage, config, prefs, logic);
+            logger.info("showing new window");
             mainWindow.show(); //This should be called before creating other UI parts
+            logger.info("Filling inner parts");
             mainWindow.fillInnerParts();
 
         } catch (Throwable e) {
