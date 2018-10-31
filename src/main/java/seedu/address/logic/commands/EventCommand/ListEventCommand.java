@@ -13,7 +13,7 @@ import seedu.address.model.Model;
  */
 
 public class ListEventCommand extends Command{
-    public static final String COMMAND_WORD = "listEvents";
+    public static final String COMMAND_WORD = "listEvent";
 
     public static final String COMMAND_ALIAS = "le";
 

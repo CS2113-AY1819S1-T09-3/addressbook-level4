@@ -16,8 +16,8 @@ public class Event {
     private final EventDate date;
     private final Set<Tag> tags = new HashSet<>();
 
-    public Event(EventName name, Venue venue, Description description, EventDate date) {
-        requireAllNonNull(name,venue,description,date);
+    public Event(EventName name, Venue venue, Description description, EventDate date,Tag tages) {
+        requireAllNonNull(name,venue,description,date,tags);
         this.name = name;
         this.venue = venue;
         this.description = description;

@@ -1,5 +1,9 @@
 package seedu.address.logic.commands.EventCommand;
 
+import static seedu.address.logic.parser.CliSyntax.PREFIX_DATE;
+import static seedu.address.logic.parser.CliSyntax.PREFIX_VENUE;
+import static seedu.address.logic.parser.CliSyntax.PREFIX_DESCRIPTION;
+import static seedu.address.logic.parser.CliSyntax.PREFIX_NAME;
 import static java.util.Objects.requireNonNull;
 
 import seedu.address.logic.CommandHistory;
@@ -23,7 +27,14 @@ public class AddEventCommand extends Command {
 
     public static final String COMMAND_ALIAS = "ae";
 
-    public static final String COMMAND_USAGE = COMMAND_WORD + ":add an event to the Event" + "parameters";
+    public static final String COMMAND_USAGE = COMMAND_WORD
+            + ":add an event to the Event\n"
+            + "parameters: "
+            + PREFIX_NAME + "EVENT NAME "
+            + PREFIX_VENUE + "EVENT VENUE "
+            + PREFIX_DESCRIPTION + "EVENT DESCRIPTION"
+            + PREFIX_DATE + "EVENT DATE\n"
+            +  "Example: " + COMMAND_WORD + "n/Basketball training v/MPSH3 D/Bring your own basketball d/1/11/18\n ";;
 
     public static final String MESSAGE_SUCCESS = "New event added: %1$s";
 

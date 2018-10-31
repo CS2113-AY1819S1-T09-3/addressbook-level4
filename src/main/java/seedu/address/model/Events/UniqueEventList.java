@@ -49,6 +49,7 @@ public class UniqueEventList implements Iterable<Event> {
      * {@code target} must exist in the list.
      * The event name of {@code editedEvent} must not be the same as another existing event in the list.
      */
+
     public void setEvent(Event target, Event editedEvent) {
         requireAllNonNull(target, editedEvent);
 
@@ -63,6 +64,21 @@ public class UniqueEventList implements Iterable<Event> {
 
         internalList.set(index, editedEvent);
     }
+
+
+        public void setEvents(UniqueEventList replacement) {
+            requireNonNull(replacement);
+            internalList.setAll(replacement.internalList);
+        }
+
+        public void setEvents(List<Event> events) {
+            requireAllNonNull(events);
+            if (!EventAreUnique(events)) {
+                throw new DuplicateEventException();
+            }
+
+            internalList.setAll(events);
+        }
 
     /**
      * Removes the event in the list.
@@ -108,14 +124,6 @@ public class UniqueEventList implements Iterable<Event> {
     public int hashCode() {
         return internalList.hashCode();
     }
-
-
-
-
-
-
-
-
 
 
 

@@ -5,14 +5,14 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Region;
-import seedu.address.model.Events.Event;
+import seedu.address.model.item.Item;
 
 /**
- * An UI component that displays information of a {@code Event}.
+ * An UI component that displays information of a {@code Item}.
  */
-public class EventCard extends UiPart<Region> {
+public class ItemCard extends UiPart<Region> {
 
-    private static final String FXML = "EventListCard.fxml";
+    private static final String FXML = "ItemListCard.fxml";
 
     /**
      * Note: Certain keywords such as "location" and "resources" are reserved keywords in JavaFX.
@@ -22,32 +22,25 @@ public class EventCard extends UiPart<Region> {
      * @see <a href="https://github.com/se-edu/addressbook-level4/issues/336">The issue on AddressBook level 4</a>
      */
 
-    public final Event event;
+    public final Item item;
 
+    @javafx.fxml.FXML
+    private HBox cardPane;
     @FXML
-    private HBox cardPaneEvent;
-    @FXML
-    private Label name;
-    @FXML
-    private Label venue;
-    @FXML
-    private Label description;
-    @FXML
-    private Label date;
+    private Label itemName;
     @FXML
     private Label id;
     @FXML
+    private Label itemQuantity;
+    @FXML
     private FlowPane tags;
 
-    public EventCard(Event event, int displayedIndex) {
+    public ItemCard(Item item, int displayedIndex) {
         super(FXML);
-        this.event = event;
+        this.item = item;
         id.setText(displayedIndex + ". ");
-        name.setText(event.getEventName().ThisName);
-        date.setText(event.getEventDate().ThisDate);
-        description.setText(event.getDescription().ThisDescription);
-        venue.setText(event.getVenue().ThisVenue);
-        event.getTags().forEach(tag -> tags.getChildren().add(new Label(tag.tagName)));
+        itemName.setText(item.getItemName().fullItemName);
+        itemQuantity.setText("Quantity: " + String.valueOf(item.getItemQuantity().itemQuantity));
     }
 
     @Override
@@ -58,13 +51,13 @@ public class EventCard extends UiPart<Region> {
         }
 
         // instanceof handles nulls
-        if (!(other instanceof EventCard)) {
+        if (!(other instanceof ItemCard)) {
             return false;
         }
 
         // state check
-        EventCard card = (EventCard) other;
+        ItemCard card = (ItemCard) other;
         return id.getText().equals(card.id.getText())
-                && event.equals(card.event);
+                && item.equals(card.item);
     }
 }
