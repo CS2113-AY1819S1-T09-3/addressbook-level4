@@ -123,12 +123,170 @@
 <div class="sect1">
 <h2 id="contribution-to-user-guide"><a class="link" href="#contribution-to-user-guide">Contribution to User Guide</a></h2>
 <div class="sectionbody">
-
+<div class="sect2">
+<h3 id="calendar"><a class="link" href="#calendar">Calendar</a></h3>
+<div class="sect3">
+<h4 id="list-events-code-listevent-code"><a class="link" href="#list-events-code-listevent-code">List events: <code>listEvent</code></a></h4>
+<div class="paragraph">
+<p>Lists all the events sorted by date.<br>
+Format: <code>listEvent</code></p>
+</div>
+<div class="paragraph">
+<p>Example:
+* <code>listEvent</code>
+List all the events in the ClubHub.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="adding-an-event-code-addevent-code"><a class="link" href="#adding-an-event-code-addevent-code">Adding an event: <code>addEvent</code></a></h4>
+<div class="paragraph">
+<p>Adds an event to the calendar.<br>
+Format: <code>addEvent n/EVENT_NAME v/VENUE D/DESCRIPTION d/EVENT_DATE</code></p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+The Event name cannot be the same as an existing one (Two events are regarded as the same when they have the same name and date).
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Example:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>`addEvent n/Basketball training v/MPSH3 D/Bring your own basketball d/10/12</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="editing-an-event-code-editevent-code"><a class="link" href="#editing-an-event-code-editevent-code">Editing an event: <code>editEvent</code></a></h4>
+<div class="paragraph">
+<p>Edits an existing event in the ClubHub.<br>
+Format: <code>editEvent INDEX n/EVENT_NAME v/EVENT_VENUE D/EVENT_DESCRIPTION d/EVENT_DATE</code></p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>Edits the event at the specified <code>INDEX</code>. The index refers to the index number shown in the displayed event list. The index <strong>must be a positive integer</strong> 1, 2, 3, &#8230;&#8203;</p>
+</li>
+<li>
+<p>At least one of the optional fields must be provided.</p>
+</li>
+<li>
+<p>Existing values will be updated to the input values.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Example:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>editEvent 1 n/Basketball training v/Sports Center D/bring your own basketball d/12/12</code>
+Edit the venue and the date of the 1st event to <code>Sports Center</code> and <code>12/12</code> respectively.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="deleting-event-code-deleteevent-code"><a class="link" href="#deleting-event-code-deleteevent-code">Deleting event: <code>deleteEvent</code></a></h4>
+<div class="paragraph">
+<p>Deletes an existing event from the ClubHub.<br>
+Format: <code>deleteEvent [INDEX]</code>.</p>
+</div>
+<div class="paragraph">
+<p>Example:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>deleteEvent 1</code>
+Delete the event who&#8217;s index is 1.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
 </div>
 </div>
 <div class="sect1">
 <h2 id="contribution-to-developer-guide"><a class="link" href="#contribution-to-developer-guide">Contribution to Developer Guide</a></h2>
 <div class="sectionbody">
+<div class="sect2">
+<h3 id="events"><a class="link" href="#events">Events</a></h3>
+<div class="paragraph">
+<p>We create an Events package in model, to combine the event element such as name and venue into an event list. In the Commands package, we create an package named EventCommand, which the commands are stored in. We have totally four commands:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>addEventsCommand</code>&#8201;&#8212;&#8201;Add a new event to the event list.</p>
+</li>
+<li>
+<p><code>editEvent</code>&#8201;&#8212;&#8201;Change the information of the existing event.</p>
+</li>
+<li>
+<p><code>listEvent</code>&#8201;&#8212;&#8201;List all the existing events.</p>
+</li>
+<li>
+<p><code>deleteEvent</code>&#8201;&#8212;&#8201;Delete the a certain event.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The AddEvent/DeleteEvent mechanism is facilitated by <code>AddressBook</code>.
+It extends <code>AddressBook</code> with the <code>AddEvent</code> and <code>DeleteEvent</code> methods, and implements the following operations:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>AddressBook#addEvent()</code>&#8201;&#8212;&#8201;Adds an <code>Event</code> object to the <code>UniqueEventList</code>.</p>
+</li>
+<li>
+<p><code>AddressBook#deleteEvent()</code>&#8201;&#8212;&#8201;Removes an <code>Event</code> object from the <code>UniqueEventList</code>.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>These operations are exposed in the <code>Model</code> interface as <code>Model#addEvent()</code> and <code>Model#removeEvent()</code> respectively.</p>
+</div>
+<div class="paragraph">
+<p>Below is a scenario of how a user adds an <code>Event</code> into the club book.</p>
+</div>
+<div class="paragraph">
+<p>Step 1. The user inputs the command addEvent n/[eventName] v/[eventVenue] D/[eventDescription] d[eventDate] into the command box.</p>
+</div>
+<div class="paragraph">
+<p>Step 2. The <code>CommandBox</code> UI will create a <code>Logic</code> object which parses the command to ascertain that it is an <code>addEvent</code> command.</p>
+</div>
+<div class="paragraph">
+<p>Step 3. The <code>AddressBookParser</code> will then parse the command to create a new <code>addEventParser</code> object.</p>
+</div>
+<div class="paragraph">
+<p>Step 4. This <code>addEventParser</code> will parse the arguments of the command line and create a new <code>AddEvent</code> object.</p>
+</div>
+<div class="paragraph">
+<p>Step 5. This will then be put into the <code>model</code>, into the <code>VersionedAddressBook</code>.</p>
+</div>
+<div class="paragraph">
+<p>The <code>Event</code> class creates an object that instantiates an <code>EventName</code> object, an <code>EventVenue</code>, an <code>EventDescription</code> and an <code>EventDate</code> objects. The multiple <code>Event</code> objects created will be stored in a <code>UniqueEventList</code>, where the uniqueness of every <code>Event</code> is in its <code>EventName</code>.</p>
+</div>
+<div class="paragraph">
+<p>This uniqueness is attained by comparing the <code>EventName</code> object in the <code>Event</code> to be added and the <code>Event&#8217;s already in the `UniqueEventList</code> using the <code>getEventName()</code> method in <code>Event</code>.</p>
+</div>
 <div class="ulist">
 <ul>
 <li>
@@ -168,4 +326,5 @@
 </ul>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-11-12 16:43:40 UTC</div></div></div></body></html>
+</div>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-11-12 16:44:25 UTC</div></div></div></body></html>
