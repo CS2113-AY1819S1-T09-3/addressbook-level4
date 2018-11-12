@@ -1,9 +1,9 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]--><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="Asciidoctor 1.5.6.1"><title>AddressBook Level 4 - User Guide</title><link rel="stylesheet" href="stylesheets/gh-pages.css">
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]--><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="Asciidoctor 1.5.6.1"><title>ClubHub - User Guide</title><link rel="stylesheet" href="stylesheets/gh-pages.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="stylesheets/coderay-asciidoctor.css"></head><body class="article"><div id="seedu-header"><nav class="navbar navbar-lg navbar-light bg-lighter"><div class="container"><a class="navbar-brand" href="https://se-edu.github.io/"><img src="images/SeEduLogo.png" alt="SE-EDU"></a><ul class="navbar-nav"><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/addressbook-level1">AB-1</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/addressbook-level2">AB-2</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/addressbook-level3">AB-3</a></li><li class="nav-item"><a class="nav-link active" href="index.html">AB-4</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/collate">Collate</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/se-book">Book</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/learningresources">Resources</a></li></ul></div></nav></div><div id="site-header"><nav class="navbar navbar-light bg-light"><div class="container"><a class="navbar-brand" href="index.html">AddressBook-Level4</a><ul class="navbar-nav"><li class="nav-item"><a class="nav-link active" href="UserGuide.html">User Guide</a></li><li class="nav-item"><a class="nav-link" href="DeveloperGuide.html">Developer Guide</a></li><li class="nav-item"><a class="nav-link" href="LearningOutcomes.html">LOs</a></li><li class="nav-item"><a class="nav-link" href="AboutUs.html">About Us</a></li><li class="nav-item"><a class="nav-link" href="ContactUs.html">Contact Us</a></li><li class="navitem"><a class="nav-link" href="https://github.com/se-edu/addressbook-level4"><span class="fa fa-github fa-lg" aria-hidden="true"></span>&nbsp;View on GitHub</a></li></ul></div></nav></div><div id="header"><h1>AddressBook Level 4 - User Guide</h1></div><div id="content"><div id="preamble">
+<link rel="stylesheet" href="stylesheets/coderay-asciidoctor.css"></head><body class="article"><div id="seedu-header"><nav class="navbar navbar-lg navbar-light bg-lighter"><div class="container"><a class="navbar-brand" href="https://se-edu.github.io/"><img src="images/SeEduLogo.png" alt="SE-EDU"></a><ul class="navbar-nav"><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/addressbook-level1">AB-1</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/addressbook-level2">AB-2</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/addressbook-level3">AB-3</a></li><li class="nav-item"><a class="nav-link active" href="index.html">AB-4</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/collate">Collate</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/se-book">Book</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/learningresources">Resources</a></li></ul></div></nav></div><div id="site-header"><nav class="navbar navbar-light bg-light"><div class="container"><a class="navbar-brand" href="index.html">main</a><ul class="navbar-nav"><li class="nav-item"><a class="nav-link active" href="UserGuide.html">User Guide</a></li><li class="nav-item"><a class="nav-link" href="DeveloperGuide.html">Developer Guide</a></li><li class="nav-item"><a class="nav-link" href="LearningOutcomes.html">LOs</a></li><li class="nav-item"><a class="nav-link" href="AboutUs.html">About Us</a></li><li class="nav-item"><a class="nav-link" href="ContactUs.html">Contact Us</a></li><li class="navitem"><a class="nav-link" href="https://github.com/CS2113-AY1819S1-T09-3/main"><span class="fa fa-github fa-lg" aria-hidden="true"></span>&nbsp;View on GitHub</a></li></ul></div></nav></div><div id="header"><h1>ClubHub - User Guide</h1></div><div id="content"><div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>By: <code>Team SE-EDU</code>      Since: <code>Jun 2016</code>      Licence: <code>MIT</code></p>
+<p>By: <code>Team T09-3</code>      Since: <code>Sep 2018</code>      Licence: <code>NUS</code></p>
 </div>
 </div>
 <div id="toc" class="toc">
@@ -13,32 +13,31 @@
 <li><a href="#quick-start">2. Quick Start</a></li>
 <li><a href="#Features">3. General Features</a>
 <ul class="sectlevel2">
-<li><a href="#viewing-help-code-help-code">3.1. Viewing help : <code>help</code></a></li>
-<li><a href="#adding-a-person-code-add-code">3.2. Adding a person: <code>add</code></a></li>
-<li><a href="#listing-all-persons-code-list-code">3.3. Listing all persons : <code>list</code></a></li>
-<li><a href="#editing-a-person-code-edit-code">3.4. Editing a person : <code>edit</code></a></li>
-<li><a href="#locating-persons-by-name-code-find-code">3.5. Locating persons by name: <code>find</code></a></li>
-<li><a href="#deleting-a-person-code-delete-code">3.6. Deleting a person : <code>delete</code></a></li>
-<li><a href="#selecting-a-person-code-select-code">3.7. Selecting a person : <code>select</code></a></li>
-<li><a href="#listing-entered-commands-code-history-code">3.8. Listing entered commands : <code>history</code></a></li>
-<li><a href="#undoing-previous-command-code-undo-code">3.9. Undoing previous command : <code>undo</code></a></li>
-<li><a href="#redoing-the-previously-undone-command-code-redo-code">3.10. Redoing the previously undone command : <code>redo</code></a></li>
-<li><a href="#clearing-all-entries-code-clear-code">3.11. Clearing all entries : <code>clear</code></a></li>
-<li><a href="#exiting-the-program-code-exit-code">3.12. Exiting the program : <code>exit</code></a></li>
-<li><a href="#saving-the-data">3.13. Saving the data</a></li>
-<li><a href="#encrypting-data-files-code-coming-in-v2-0-code">3.14. Encrypting data files <code>[coming in v2.0]</code></a></li>
+<li><a href="#viewing-help">3.1. Viewing help</a></li>
+<li><a href="#listing-all-persons">3.2. Listing all persons</a></li>
+<li><a href="#selecting-a-person">3.3. Selecting a person</a></li>
+<li><a href="#listing-entered-commands">3.4. Listing entered commands</a></li>
+<li><a href="#undoing-previous-command">3.5. Undoing previous command</a></li>
+<li><a href="#redoing-the-previously-undone-command">3.6. Redoing the previously undone command</a></li>
+<li><a href="#undoing-all-previous-commands">3.7. Undoing all previous commands</a></li>
+<li><a href="#redoing-all-previously-undone-commands">3.8. Redoing all previously undone commands</a></li>
+<li><a href="#clearing-all-entries">3.9. Clearing all entries</a></li>
+<li><a href="#exiting-the-program">3.10. Exiting the program</a></li>
+<li><a href="#saving-the-data">3.11. Saving the data</a></li>
+<li><a href="#encrypting-data-files-code-coming-in-v2-0-code">3.12. Encrypting data files <code>[coming in v2.0]</code></a></li>
 </ul>
 </li>
-<li><a href="#Features">4. Main Features</a>
+<li><a href="#main-features">4. Main Features</a>
 <ul class="sectlevel2">
-<li><a href="#calendar-code-opencalendar-code">4.1. Calendar: <code>openCalendar</code></a></li>
-<li><a href="#finances-code-openfinances-code">4.2. Finances: <code>openFinances</code></a></li>
-<li><a href="#members-code-openmembers-code">4.3. Members: <code>openMembers</code></a></li>
-<li><a href="#inventory-code-openinventory-code">4.4. Inventory: <code>openInventory</code></a></li>
+<li><a href="#members">4.1. Members</a></li>
+<li><a href="#accounts">4.2. Accounts</a></li>
+<li><a href="#calendar">4.3. Calendar</a></li>
+<li><a href="#itemlist">4.4. ItemList</a></li>
 </ul>
 </li>
-<li><a href="#faq">5. FAQ</a></li>
-<li><a href="#command-summary">6. Command Summary</a></li>
+<li><a href="#record-feature-code-coming-in-v2-0-code">5. Record feature <code>[coming in v2.0]</code></a></li>
+<li><a href="#faq">6. FAQ</a></li>
+<li><a href="#command-summary">7. Command Summary</a></li>
 </ul>
 </div>
 </div>
@@ -46,7 +45,7 @@
 <h2 id="introduction"><a class="link" href="#introduction">1. Introduction</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>AddressBook Level 4 (AB4) is for those who <strong>prefer to use a desktop app for managing contacts</strong>. More importantly, AB4 is <strong>optimized for those who prefer to work with a Command Line Interface</strong> (CLI) while still having the benefits of a Graphical User Interface (GUI). If you can type fast, AB4 can get your contact management tasks done faster than traditional GUI apps. Interested? Jump to the <a href="#quick-start">Section 2, &#8220;Quick Start&#8221;</a> to get started. Enjoy!</p>
+<p>ClubHub (CH) is for those who <strong>prefer to use a desktop app for managing members, inventory, finances and events in their club</strong>. More importantly, CH is <strong>optimized for those who prefer to work with a Command Line Interface</strong> (CLI) while still having the benefits of a Graphical User Interface (GUI). If you can type fast, CH can get your club management tasks done faster than traditional GUI apps. Interested? Jump to the <a href="#quick-start">Section 2, &#8220;Quick Start&#8221;</a> to get started. Enjoy!</p>
 </div>
 </div>
 </div>
@@ -59,10 +58,10 @@
 <p>Ensure you have Java version <code>9</code> or later installed in your Computer.</p>
 </li>
 <li>
-<p>Download the latest <code>addressbook.jar</code> <a href="https://github.com/se-edu/addressbook-level4/releases">here</a>.</p>
+<p>Download the latest <code>addressbook.jar</code> <a href="https://github.com/CS2113-AY1819S1-T09-3/main/releases">here</a>.</p>
 </li>
 <li>
-<p>Copy the file to the folder you want to use as the home folder for your Address Book.</p>
+<p>Copy the file to the folder you want to use as the home folder for your ClubHub.</p>
 </li>
 <li>
 <p>Double-click the file to start the app. The GUI should appear in a few seconds.</p>
@@ -84,10 +83,7 @@ e.g. typing <strong><code>help</code></strong> and pressing <kbd>Enter</kbd> wil
 <p><strong><code>list</code></strong> : lists all contacts</p>
 </li>
 <li>
-<p><strong><code>add</code></strong><code>n/John Doe p/98765432 e/johnd@example.com a/John street, block 123, #01-01</code> : adds a contact named <code>John Doe</code> to the Address Book.</p>
-</li>
-<li>
-<p><strong><code>delete</code></strong><code>3</code> : deletes the 3rd contact shown in the current list</p>
+<p><code>help</code> : opens up this user guide</p>
 </li>
 <li>
 <p><strong><code>exit</code></strong> : exits the app</p>
@@ -129,16 +125,245 @@ e.g. typing <strong><code>help</code></strong> and pressing <kbd>Enter</kbd> wil
 </div>
 </div>
 <div class="sect2">
-<h3 id="viewing-help-code-help-code"><a class="link" href="#viewing-help-code-help-code">3.1. Viewing help : <code>help</code></a></h3>
+<h3 id="viewing-help"><a class="link" href="#viewing-help">3.1. Viewing help</a></h3>
 <div class="paragraph">
-<p>Format: <code>help</code></p>
+<p>Opens up this user guide
+Format: <code>help</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="adding-a-person-code-add-code"><a class="link" href="#adding-a-person-code-add-code">3.2. Adding a person: <code>add</code></a></h3>
+<h3 id="listing-all-persons"><a class="link" href="#listing-all-persons">3.2. Listing all persons</a></h3>
 <div class="paragraph">
-<p>Adds a person to the address book<br>
-Format: <code>add n/NAME p/PHONE_NUMBER e/EMAIL a/ADDRESS [t/TAG]&#8230;&#8203;</code></p>
+<p>Shows a list of all persons in the ClubHub.<br>
+Format: <code>list</code></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="selecting-a-person"><a class="link" href="#selecting-a-person">3.3. Selecting a person</a></h3>
+<div class="paragraph">
+<p>Selects the person identified by the index number used in the displayed person list.<br>
+Format: <code>select INDEX</code></p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>Selects the person and loads the Google search page the person at the specified <code>INDEX</code>.</p>
+</li>
+<li>
+<p>The index refers to the index number shown in the displayed person list.</p>
+</li>
+<li>
+<p>The index <strong>must be a positive integer</strong> <code>1, 2, 3, &#8230;&#8203;</code></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>list</code><br>
+<code>select 2</code><br>
+Selects the 2nd person in ClubHub.</p>
+</li>
+<li>
+<p><code>find Betsy</code><br>
+<code>select 1</code><br>
+Selects the 1st person in the results of the <code>find</code> command.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="listing-entered-commands"><a class="link" href="#listing-entered-commands">3.4. Listing entered commands</a></h3>
+<div class="paragraph">
+<p>Lists all the commands that you have entered in reverse chronological order.<br>
+Format: <code>history</code></p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Pressing the <kbd>&uarr;</kbd> and <kbd>&darr;</kbd> arrows will display the previous and next input respectively in the command box.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="undoing-previous-command"><a class="link" href="#undoing-previous-command">3.5. Undoing previous command</a></h3>
+<div class="paragraph">
+<p>Restores ClubHub to the state before the previous <em>undoable</em> command was executed.<br>
+Format: <code>undo</code></p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Undoable commands: those commands that modify ClubHub&#8217;s content (<code>add</code>, <code>delete</code>, <code>edit</code> and <code>clear</code>).</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>delete 1</code><br>
+<code>list</code><br>
+<code>undo</code> (reverses the <code>delete 1</code> command)<br></p>
+</li>
+<li>
+<p><code>select 1</code><br>
+<code>list</code><br>
+<code>undo</code><br>
+The <code>undo</code> command fails as there are no undoable commands executed previously.</p>
+</li>
+<li>
+<p><code>delete 1</code><br>
+<code>clear</code><br>
+<code>undo</code> (reverses the <code>clear</code> command)<br>
+<code>undo</code> (reverses the <code>delete 1</code> command)<br></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="redoing-the-previously-undone-command"><a class="link" href="#redoing-the-previously-undone-command">3.6. Redoing the previously undone command</a></h3>
+<div class="paragraph">
+<p>Reverses the most recent <code>undo</code> command.<br>
+Format: <code>redo</code></p>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>delete 1</code><br>
+<code>undo</code> (reverses the <code>delete 1</code> command)<br>
+<code>redo</code> (reapplies the <code>delete 1</code> command)<br></p>
+</li>
+<li>
+<p><code>delete 1</code><br>
+<code>redo</code><br>
+The <code>redo</code> command fails as there are no <code>undo</code> commands executed previously.</p>
+</li>
+<li>
+<p><code>delete 1</code><br>
+<code>clear</code><br>
+<code>undo</code> (reverses the <code>clear</code> command)<br>
+<code>undo</code> (reverses the <code>delete 1</code> command)<br>
+<code>redo</code> (reapplies the <code>delete 1</code> command)<br>
+<code>redo</code> (reapplies the <code>clear</code> command)<br></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="undoing-all-previous-commands"><a class="link" href="#undoing-all-previous-commands">3.7. Undoing all previous commands</a></h3>
+<div class="paragraph">
+<p>Restores ClubHub to the state before all previous undoable commands were executed.<br>
+Format: <code>undoAll</code></p>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>deleteItem 1</code><br>
+<code>deleteItem 2</code><br>
+<code>undoAll</code> (reverses both the <code>deleteItem 1</code> and <code>deleteItem 2</code> commands)<br></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="redoing-all-previously-undone-commands"><a class="link" href="#redoing-all-previously-undone-commands">3.8. Redoing all previously undone commands</a></h3>
+<div class="paragraph">
+<p>Reverses all undo commands.<br>
+Format: <code>redoAll</code></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>deleteItem 1</code><br>
+<code>deleteItem 2</code><br>
+<code>undo</code> (reverses the <code>deleteItem 2</code> command)<br>
+<code>undo</code> (reverses the <code>deleteItem 1</code> command)<br>
+<code>redoAll</code> (reapplies both the <code>deleteItem 1</code> and <code>deleteItem 2</code> commands)<br></p>
+</li>
+<li>
+<p><code>deleteItem 1</code><br>
+<code>redoAll</code><br>
+The <code>redoAll</code> command fails as there are no <code>undo</code> commands executed previously.</p>
+</li>
+<li>
+<p><code>deleteItem 1</code><br>
+<code>addItem n/Ball q/1 l/Storeroom</code><br>
+<code>undoAll</code> (reverses the <code>deleteItem 1</code> and <code>addItem n/Ball q/1 l/Storeroom</code> commands)<br>
+<code>redoAll</code> (reapplies the <code>deleteItem 1</code> and <code>addItem n/Ball q/1 l/Storeroom</code> commands)<br></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="clearing-all-entries"><a class="link" href="#clearing-all-entries">3.9. Clearing all entries</a></h3>
+<div class="paragraph">
+<p>Clears all entries from ClubHub.<br>
+Format: <code>clear</code></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="exiting-the-program"><a class="link" href="#exiting-the-program">3.10. Exiting the program</a></h3>
+<div class="paragraph">
+<p>Exits the program.<br>
+Format: <code>exit</code></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="saving-the-data"><a class="link" href="#saving-the-data">3.11. Saving the data</a></h3>
+<div class="paragraph">
+<p>ClubHub data are saved in the hard disk automatically after any command that changes the data.<br>
+There is no need to save manually.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="encrypting-data-files-code-coming-in-v2-0-code"><a class="link" href="#encrypting-data-files-code-coming-in-v2-0-code">3.12. Encrypting data files <code>[coming in v2.0]</code></a></h3>
+<div class="paragraph">
+<p><em>{explain how the user can enable/disable data encryption}</em></p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="main-features"><a class="link" href="#main-features">4. Main Features</a></h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="members"><a class="link" href="#members">4.1. Members</a></h3>
+<div class="sect3">
+<h4 id="adding-a-member-code-addmember-code"><a class="link" href="#adding-a-member-code-addmember-code">4.1.1. Adding a member: <code>addmember</code></a></h4>
+<div class="paragraph">
+<p>Adds a person to the ClubHub<br>
+Format: <code>addmember n/NAME p/PHONE_NUMBER e/EMAIL a/ADDRESS c/POSTALCODE m/MAJOR [t/TAG]&#8230;&#8203;</code></p>
 </div>
 <div class="admonitionblock tip">
 <table>
@@ -158,26 +383,16 @@ A person can have any number of tags (including 0)
 <div class="ulist">
 <ul>
 <li>
-<p><code>add n/John Doe p/98765432 e/johnd@example.com a/John street, block 123, #01-01</code></p>
-</li>
-<li>
-<p><code>add n/Betsy Crowe t/friend e/betsycrowe@example.com a/Newgate Prison p/1234567 t/criminal</code></p>
+<p><code>addmember n/John Doe p/98765432 e/johnd@example.com a/311, Clementi Ave 2, #02-25 c/609653 m/Computer engineering t/friends t/owesMoney</code></p>
 </li>
 </ul>
 </div>
 </div>
-<div class="sect2">
-<h3 id="listing-all-persons-code-list-code"><a class="link" href="#listing-all-persons-code-list-code">3.3. Listing all persons : <code>list</code></a></h3>
+<div class="sect3">
+<h4 id="editing-a-member-code-editmember-code"><a class="link" href="#editing-a-member-code-editmember-code">4.1.2. Editing a member : <code>editmember</code></a></h4>
 <div class="paragraph">
-<p>Shows a list of all persons in the address book.<br>
-Format: <code>list</code></p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="editing-a-person-code-edit-code"><a class="link" href="#editing-a-person-code-edit-code">3.4. Editing a person : <code>edit</code></a></h3>
-<div class="paragraph">
-<p>Edits an existing person in the address book.<br>
-Format: <code>edit INDEX [n/NAME] [p/PHONE] [e/EMAIL] [a/ADDRESS] [t/TAG]&#8230;&#8203;</code></p>
+<p>Edits an existing person in the ClubHub.<br>
+Format: <code>editmember INDEX [n/NAME] [p/PHONE] [e/EMAIL] [a/ADDRESS] [c/POSTALCODE] [m/MAJOR] [t/TAG]&#8230;&#8203;</code></p>
 </div>
 <div class="sidebarblock">
 <div class="content">
@@ -208,18 +423,18 @@ Format: <code>edit INDEX [n/NAME] [p/PHONE] [e/EMAIL] [a/ADDRESS] [t/TAG]&#8230;
 <div class="ulist">
 <ul>
 <li>
-<p><code>edit 1 p/91234567 e/johndoe@example.com</code><br>
+<p><code>editmember 1 p/91234567 e/johndoe@example.com</code><br>
 Edits the phone number and email address of the 1st person to be <code>91234567</code> and <code>johndoe@example.com</code> respectively.</p>
 </li>
 <li>
-<p><code>edit 2 n/Betsy Crower t/</code><br>
+<p><code>editmember 2 n/Betsy Crower t/</code><br>
 Edits the name of the 2nd person to be <code>Betsy Crower</code> and clears all existing tags.</p>
 </li>
 </ul>
 </div>
 </div>
-<div class="sect2">
-<h3 id="locating-persons-by-name-code-find-code"><a class="link" href="#locating-persons-by-name-code-find-code">3.5. Locating persons by name: <code>find</code></a></h3>
+<div class="sect3">
+<h4 id="locating-members-by-name-code-find-code"><a class="link" href="#locating-members-by-name-code-find-code">4.1.3. Locating members by name: <code>find</code></a></h4>
 <div class="paragraph">
 <p>Finds persons whose names contain any of the given keywords.<br>
 Format: <code>find KEYWORD [MORE_KEYWORDS]</code></p>
@@ -263,10 +478,133 @@ Returns any person having names <code>Betsy</code>, <code>Tim</code>, or <code>J
 </ul>
 </div>
 </div>
-<div class="sect2">
-<h3 id="deleting-a-person-code-delete-code"><a class="link" href="#deleting-a-person-code-delete-code">3.6. Deleting a person : <code>delete</code></a></h3>
+<div class="sect3">
+<h4 id="locating-members-by-major-code-findmajor-code"><a class="link" href="#locating-members-by-major-code-findmajor-code">4.1.4. Locating members by major: <code>findmajor</code></a></h4>
 <div class="paragraph">
-<p>Deletes the specified person from the address book.<br>
+<p>Finds persons whose names contain any of the given keywords.<br>
+Format: <code>findmajor KEYWORD [MORE_KEYWORDS]</code></p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>The search is case insensitive. e.g <code>computer</code> will match <code>Computer</code></p>
+</li>
+<li>
+<p>The order of the keywords does not matter. e.g. <code>Engineering computer</code> will match <code>Computer engineering</code></p>
+</li>
+<li>
+<p>Only the name is searched.</p>
+</li>
+<li>
+<p>Majors matching at least one keyword will be returned e.g ` Computer Engineering` will be listed when <code>Engineering</code> is searched</p>
+</li>
+<li>
+<p>Only full words will be matched e.g. <code>Compute</code> will not match <code>Computer</code></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>findmajor Computer Engineering</code><br>
+Returns member whose major is <code>Computer Engineering</code></p>
+</li>
+<li>
+<p><code>findmajor Engineering</code><br>
+Returns members whose major contains the keyword <code>Engineering</code></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="locating-members-by-phone-number-code-findphone-code"><a class="link" href="#locating-members-by-phone-number-code-findphone-code">4.1.5. Locating members by phone number: <code>findphone</code></a></h4>
+<div class="paragraph">
+<p>Finds persons whose names contain any of the given keywords.<br>
+Format: <code>findphone KEYWORD [MORE_KEYWORDS]</code></p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>The order of the keywords does not matter.</p>
+</li>
+<li>
+<p>Only the phone number is searched.</p>
+</li>
+<li>
+<p>Only full numbers will be matched e.g. <code>9723</code> will not match <code>97233234</code></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>findphone 97233234</code><br>
+Returns member whose phone number is <code>97233234</code></p>
+</li>
+<li>
+<p><code>findphone 97233234 84280511</code><br>
+Returns members whose phone numbers are`97233234 or 84280511'</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="locating-members-by-postalcode-code-findpostalcode-code"><a class="link" href="#locating-members-by-postalcode-code-findpostalcode-code">4.1.6. Locating members by postalcode: <code>findpostalcode</code></a></h4>
+<div class="paragraph">
+<p>Finds persons whose names contain any of the given keywords.<br>
+Format: <code>findpostalcode KEYWORD [MORE_KEYWORDS]</code></p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>The order of the keywords does not matter.</p>
+</li>
+<li>
+<p>Only the postalcode is searched.</p>
+</li>
+<li>
+<p>Only full numbers will be matched e.g. <code>609</code> will not match <code>609653</code></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>findpostalcode 609653</code><br>
+Returns member whose postalcode is <code>609653</code></p>
+</li>
+<li>
+<p><code>findpostalcode 609653 555555</code><br>
+Returns members whose postalcodes are <code>609653 or 555555</code></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="deleting-a-member-code-delete-code"><a class="link" href="#deleting-a-member-code-delete-code">4.1.7. Deleting a member : <code>delete</code></a></h4>
+<div class="paragraph">
+<p>Deletes the specified person from ClubHub.<br>
 Format: <code>delete INDEX</code></p>
 </div>
 <div class="sidebarblock">
@@ -294,7 +632,7 @@ Format: <code>delete INDEX</code></p>
 <li>
 <p><code>list</code><br>
 <code>delete 2</code><br>
-Deletes the 2nd person in the address book.</p>
+Deletes the 2nd person in ClubHub.</p>
 </li>
 <li>
 <p><code>find Betsy</code><br>
@@ -304,314 +642,440 @@ Deletes the 1st person in the results of the <code>find</code> command.</p>
 </ul>
 </div>
 </div>
+</div>
 <div class="sect2">
-<h3 id="selecting-a-person-code-select-code"><a class="link" href="#selecting-a-person-code-select-code">3.7. Selecting a person : <code>select</code></a></h3>
+<h3 id="accounts"><a class="link" href="#accounts">4.2. Accounts</a></h3>
 <div class="paragraph">
-<p>Selects the person identified by the index number used in the displayed person list.<br>
-Format: <code>select INDEX</code></p>
+<p>The accounts features a ledger column to record the spending of the club
+on any date in the form of DD/MM. There are 4 basic commands allowing the user to
+add or delete a ledger, and to credit or debit money from any date in the
+list of records.</p>
+</div>
+<div class="sect3">
+<h4 id="adding-a-ledger-code-addledger-code"><a class="link" href="#adding-a-ledger-code-addledger-code">4.2.1. Adding a ledger: <code>addLedger</code></a></h4>
+<div class="paragraph">
+<p>Adds a ledger to the ledger column.<br>
+Format: <code>addLedger d/[DD/MM]</code></p>
+</div>
+<div class="paragraph">
+<p>Example: <code>addLedger d/ 10/10</code></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="deleting-a-ledger-code-deleteledger-code"><a class="link" href="#deleting-a-ledger-code-deleteledger-code">4.2.2. Deleting a ledger: <code>deleteLedger</code></a></h4>
+<div class="paragraph">
+<p>Deletes a ledger from the log.<br>
+Format: <code>deleteLedger d/[DD/MM]</code></p>
+</div>
+<div class="paragraph">
+<p>Example: <code>deleteLedger d/ 10/10</code></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="crediting-a-ledger-code-credit-code"><a class="link" href="#crediting-a-ledger-code-credit-code">4.2.3. Crediting a ledger: <code>credit</code></a></h4>
+<div class="paragraph">
+<p>Increase the balance of a ledger on a date indicated.<br>
+Format: <code>credit d/[DD/MM] b/[NUM]</code></p>
+</div>
+<div class="paragraph">
+<p>Example: <code>credit d/ 10/10 b/ 100</code></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="debiting-a-ledger-code-debit-code"><a class="link" href="#debiting-a-ledger-code-debit-code">4.2.4. Debiting a ledger: <code>debit</code></a></h4>
+<div class="paragraph">
+<p>Decrease the balance of a ledger on a date indicated.<br>
+Format: <code>debit d/[DD/MM] b/[NUM]</code></p>
+</div>
+<div class="paragraph">
+<p>Example: <code>debit d/ 10/10 b/ 100</code></p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="calendar"><a class="link" href="#calendar">4.3. Calendar</a></h3>
+<div class="sect3">
+<h4 id="list-events-code-listevent-code"><a class="link" href="#list-events-code-listevent-code">4.3.1. List events: <code>listEvent</code></a></h4>
+<div class="paragraph">
+<p>Lists all the events sorted by date.<br>
+Format: <code>listEvent</code></p>
+</div>
+<div class="paragraph">
+<p>Example:
+* <code>listEvent</code>
+List all the events in the ClubHub.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="adding-an-event-code-addevent-code"><a class="link" href="#adding-an-event-code-addevent-code">4.3.2. Adding an event: <code>addEvent</code></a></h4>
+<div class="paragraph">
+<p>Adds an event to the calendar.<br>
+Format: <code>addEvent n/EVENT_NAME v/VENUE D/DESCRIPTION d/EVENT_DATE</code></p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+The Event name cannot be the same as an existing one (Two events are regarded as the same when they have the same name and date).
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Example:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>`addEvent n/Basketball training v/MPSH3 D/Bring your own basketball d/10/12</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="editing-an-event-code-editevent-code"><a class="link" href="#editing-an-event-code-editevent-code">4.3.3. Editing an event: <code>editEvent</code></a></h4>
+<div class="paragraph">
+<p>Edits an existing event in the ClubHub.<br>
+Format: <code>editEvent INDEX n/EVENT_NAME v/EVENT_VENUE D/EVENT_DESCRIPTION d/EVENT_DATE</code></p>
 </div>
 <div class="sidebarblock">
 <div class="content">
 <div class="ulist">
 <ul>
 <li>
-<p>Selects the person and loads the Google search page the person at the specified <code>INDEX</code>.</p>
+<p>Edits the event at the specified <code>INDEX</code>. The index refers to the index number shown in the displayed event list. The index <strong>must be a positive integer</strong> 1, 2, 3, &#8230;&#8203;</p>
 </li>
 <li>
-<p>The index refers to the index number shown in the displayed person list.</p>
+<p>At least one of the optional fields must be provided.</p>
 </li>
 <li>
-<p>The index <strong>must be a positive integer</strong> <code>1, 2, 3, &#8230;&#8203;</code></p>
+<p>Existing values will be updated to the input values.</p>
 </li>
 </ul>
 </div>
 </div>
 </div>
 <div class="paragraph">
-<p>Examples:</p>
+<p>Example:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p><code>list</code><br>
-<code>select 2</code><br>
-Selects the 2nd person in the address book.</p>
-</li>
-<li>
-<p><code>find Betsy</code><br>
-<code>select 1</code><br>
-Selects the 1st person in the results of the <code>find</code> command.</p>
+<p><code>editEvent 1 n/Basketball training v/Sports Center D/bring your own basketball d/12/12</code>
+Edit the venue and the date of the 1st event to <code>Sports Center</code> and <code>12/12</code> respectively.</p>
 </li>
 </ul>
 </div>
 </div>
-<div class="sect2">
-<h3 id="listing-entered-commands-code-history-code"><a class="link" href="#listing-entered-commands-code-history-code">3.8. Listing entered commands : <code>history</code></a></h3>
+<div class="sect3">
+<h4 id="deleting-event-code-deleteevent-code"><a class="link" href="#deleting-event-code-deleteevent-code">4.3.4. Deleting event: <code>deleteEvent</code></a></h4>
 <div class="paragraph">
-<p>Lists all the commands that you have entered in reverse chronological order.<br>
-Format: <code>history</code></p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-<div class="paragraph">
-<p>Pressing the <kbd>&uarr;</kbd> and <kbd>&darr;</kbd> arrows will display the previous and next input respectively in the command box.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-</div>
-<div class="sect2">
-<h3 id="undoing-previous-command-code-undo-code"><a class="link" href="#undoing-previous-command-code-undo-code">3.9. Undoing previous command : <code>undo</code></a></h3>
-<div class="paragraph">
-<p>Restores the address book to the state before the previous <em>undoable</em> command was executed.<br>
-Format: <code>undo</code></p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-<div class="paragraph">
-<p>Undoable commands: those commands that modify the address book&#8217;s content (<code>add</code>, <code>delete</code>, <code>edit</code> and <code>clear</code>).</p>
-</div>
-</td>
-</tr>
-</table>
+<p>Deletes an existing event from the ClubHub.<br>
+Format: <code>deleteEvent [INDEX]</code>.</p>
 </div>
 <div class="paragraph">
-<p>Examples:</p>
+<p>Example:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p><code>delete 1</code><br>
-<code>list</code><br>
-<code>undo</code> (reverses the <code>delete 1</code> command)<br></p>
-</li>
-<li>
-<p><code>select 1</code><br>
-<code>list</code><br>
-<code>undo</code><br>
-The <code>undo</code> command fails as there are no undoable commands executed previously.</p>
-</li>
-<li>
-<p><code>delete 1</code><br>
-<code>clear</code><br>
-<code>undo</code> (reverses the <code>clear</code> command)<br>
-<code>undo</code> (reverses the <code>delete 1</code> command)<br></p>
+<p><code>deleteEvent 1</code>
+Delete the event who&#8217;s index is 1.</p>
 </li>
 </ul>
 </div>
 </div>
-<div class="sect2">
-<h3 id="redoing-the-previously-undone-command-code-redo-code"><a class="link" href="#redoing-the-previously-undone-command-code-redo-code">3.10. Redoing the previously undone command : <code>redo</code></a></h3>
-<div class="paragraph">
-<p>Reverses the most recent <code>undo</code> command.<br>
-Format: <code>redo</code></p>
-</div>
-<div class="paragraph">
-<p>Examples:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><code>delete 1</code><br>
-<code>undo</code> (reverses the <code>delete 1</code> command)<br>
-<code>redo</code> (reapplies the <code>delete 1</code> command)<br></p>
-</li>
-<li>
-<p><code>delete 1</code><br>
-<code>redo</code><br>
-The <code>redo</code> command fails as there are no <code>undo</code> commands executed previously.</p>
-</li>
-<li>
-<p><code>delete 1</code><br>
-<code>clear</code><br>
-<code>undo</code> (reverses the <code>clear</code> command)<br>
-<code>undo</code> (reverses the <code>delete 1</code> command)<br>
-<code>redo</code> (reapplies the <code>delete 1</code> command)<br>
-<code>redo</code> (reapplies the <code>clear</code> command)<br></p>
-</li>
-</ul>
-</div>
 </div>
 <div class="sect2">
-<h3 id="clearing-all-entries-code-clear-code"><a class="link" href="#clearing-all-entries-code-clear-code">3.11. Clearing all entries : <code>clear</code></a></h3>
-<div class="paragraph">
-<p>Clears all entries from the address book.<br>
-Format: <code>clear</code></p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="exiting-the-program-code-exit-code"><a class="link" href="#exiting-the-program-code-exit-code">3.12. Exiting the program : <code>exit</code></a></h3>
-<div class="paragraph">
-<p>Exits the program.<br>
-Format: <code>exit</code></p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="saving-the-data"><a class="link" href="#saving-the-data">3.13. Saving the data</a></h3>
-<div class="paragraph">
-<p>Address book data are saved in the hard disk automatically after any command that changes the data.<br>
-There is no need to save manually.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="encrypting-data-files-code-coming-in-v2-0-code"><a class="link" href="#encrypting-data-files-code-coming-in-v2-0-code">3.14. Encrypting data files <code>[coming in v2.0]</code></a></h3>
-<div class="paragraph">
-<p><em>{explain how the user can enable/disable data encryption}</em></p>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="Features"><a class="link" href="#Features">4. Main Features</a></h2>
-<div class="sectionbody">
-<div class="sect2">
-<h3 id="calendar-code-opencalendar-code"><a class="link" href="#calendar-code-opencalendar-code">4.1. Calendar: <code>openCalendar</code></a></h3>
-<div class="sect3">
-<h4 id="list-events-code-listevents-code"><a class="link" href="#list-events-code-listevents-code">4.1.1. List events: <code>listEvents</code></a></h4>
-<div class="paragraph">
-<p>Lists all the events sorted by date.<br>
-Format: <code>listEvents</code></p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="adding-an-event-code-addevent-code"><a class="link" href="#adding-an-event-code-addevent-code">4.1.2. Adding an event: <code>addEvent</code></a></h4>
-<div class="paragraph">
-<p>Adds an event to the calendar.<br>
-Format: <code>addEvent EVENT_NAME EVENT_DATE EVENT_LOCATION EVENT_DESCRIPTION</code></p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="editing-an-event-code-changeevent-code"><a class="link" href="#editing-an-event-code-changeevent-code">4.1.3. Editing an event: <code>changeEvent</code></a></h4>
-<div class="paragraph">
-<p>Edits an event on the calendar.<br>
-Format: <code>changeEvent EVENT_NAME to EVENT_NAME EVENT_DATE EVENT_LOCATION EVENT_DESCRIPTION</code></p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="deleting-event-code-deleteevent-code"><a class="link" href="#deleting-event-code-deleteevent-code">4.1.4. Deleting event: <code>deleteEvent</code></a></h4>
-<div class="paragraph">
-<p>Deletes an event from the calendar.<br>
-Format: <code>deleteEvent EVENT_NAME</code>.</p>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="finances-code-openfinances-code"><a class="link" href="#finances-code-openfinances-code">4.2. Finances: <code>openFinances</code></a></h3>
-<div class="sect3">
-<h4 id="adding-a-record-code-addrecord-code"><a class="link" href="#adding-a-record-code-addrecord-code">4.2.1. Adding a record: <code>addRecord</code></a></h4>
-<div class="paragraph">
-<p>Adds a record to the log.<br>
-Format: <code>addRecord ITEM_NAME ITEM_COST PURCHASE_DATE</code></p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="deleting-a-record-code-deleterecord-code"><a class="link" href="#deleting-a-record-code-deleterecord-code">4.2.2. Deleting a record: <code>deleteRecord</code></a></h4>
-<div class="paragraph">
-<p>Deletes a record from the log.<br>
-Format: <code>addRecord ITEM_NAME ITEM_COST PURCHASE_DATE</code></p>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="members-code-openmembers-code"><a class="link" href="#members-code-openmembers-code">4.3. Members: <code>openMembers</code></a></h3>
-<div class="sect3">
-<h4 id="adding-a-member-code-addmember-code"><a class="link" href="#adding-a-member-code-addmember-code">4.3.1. Adding a member: <code>addMember</code></a></h4>
-<div class="paragraph">
-<p>Adds a new member to the member list.<br>
-Format: <code>addMember MEMBER_NAME MEMBER_CONTACT MEMBER_EMAIL MEMBER_ADDRESS</code></p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="adding-a-member-code-addmember-code-2"><a class="link" href="#adding-a-member-code-addmember-code-2">4.3.2. Adding a member: <code>addMember</code></a></h4>
-<div class="paragraph">
-<p>Adds a new member to the member list.<br>
-Format: <code>addMember MEMBER_NAME MEMBER_CONTACT MEMBER_EMAIL MEMBER_ADDRESS</code></p>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="inventory-code-openinventory-code"><a class="link" href="#inventory-code-openinventory-code">4.4. Inventory: <code>openInventory</code></a></h3>
+<h3 id="itemlist"><a class="link" href="#itemlist">4.4. ItemList</a></h3>
 <div class="sect3">
 <h4 id="adding-an-item-code-additem-code"><a class="link" href="#adding-an-item-code-additem-code">4.4.1. Adding an item: <code>addItem</code></a></h4>
 <div class="paragraph">
-<p>Adds an Item with its quantity, category, and location to the ItemList.<br>
-Format: <code>addItem ITEM_NAME QUANTITY CATEGORY LOCATION</code></p>
+<p>Adds a item to the ItemList<br>
+Format: <code>addItem n/ITEM_NAME q/ITEM_QUANTITY l/ITEM_LOCATION</code></p>
 </div>
-</div>
-<div class="sect3">
-<h4 id="listing-items-code-listitems-code"><a class="link" href="#listing-items-code-listitems-code">4.4.2. Listing items: <code>listItems</code></a></h4>
 <div class="paragraph">
-<p>Shows the list of Items and their quantities.<br>
-Format: <code>listItems</code></p>
+<p>Examples:</p>
 </div>
-</div>
-<div class="sect3">
-<h4 id="removing-an-item-code-removeitem-code"><a class="link" href="#removing-an-item-code-removeitem-code">4.4.3. Removing an item: <code>removeItem</code></a></h4>
-<div class="paragraph">
-<p>Removes a specified quantity of an Item in the ItemList.<br>
-Format: <code>removeItem ITEM_NAME QUANTITY</code></p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="sorting-items-code-sortitemlist-code"><a class="link" href="#sorting-items-code-sortitemlist-code">4.4.4. Sorting items: <code>sortItemList</code></a></h4>
-<div class="paragraph">
-<p>Sorts the ItemList by name, quantity, category, or location.<br>
-Format: <code>sortItemListByName</code><br>
-Format: <code>sortItemListByQuantity</code><br>
-Format: <code>sortItemListByCategory</code><br>
-Format: <code>sortItemListByLocation</code><br></p>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="faq"><a class="link" href="#faq">5. FAQ</a></h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p><strong>Q</strong>: How do I transfer my data to another Computer?<br>
-<strong>A</strong>: Install the app in the other computer and overwrite the empty data file it creates with the file that contains the data of your previous Address Book folder.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="command-summary"><a class="link" href="#command-summary">6. Command Summary</a></h2>
-<div class="sectionbody">
 <div class="ulist">
 <ul>
 <li>
-<p><strong>Add</strong> <code>add n/NAME p/PHONE_NUMBER e/EMAIL a/ADDRESS [t/TAG]&#8230;&#8203;</code><br>
-e.g. <code>add n/James Ho p/22224444 e/jamesho@example.com a/123, Clementi Rd, 1234665 t/friend t/colleague</code></p>
+<p><code>addItem n/Basketball q/7 l/Storeroom</code></p>
 </li>
 <li>
-<p><strong>Clear</strong> : <code>clear</code></p>
+<p><code>addItem n/Chairs q/2 l/Clubroom</code></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="deleting-an-item-code-deleteitem-code"><a class="link" href="#deleting-an-item-code-deleteitem-code">4.4.2. Deleting an item: <code>deleteItem</code></a></h4>
+<div class="paragraph">
+<p>Deletes the specified item from ItemList.<br>
+Format: <code>deleteItem INDEX</code></p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>Deletes the item at the specified <code>INDEX</code>.</p>
 </li>
 <li>
-<p><strong>Delete</strong> : <code>delete INDEX</code><br>
-e.g. <code>delete 3</code></p>
+<p>The index refers to the index number shown in the displayed item list.</p>
 </li>
 <li>
-<p><strong>Edit</strong> : <code>edit INDEX [n/NAME] [p/PHONE_NUMBER] [e/EMAIL] [a/ADDRESS] [t/TAG]&#8230;&#8203;</code><br>
-e.g. <code>edit 2 n/James Lee e/jameslee@example.com</code></p>
+<p>The index <strong>must be a positive integer</strong> 1, 2, 3, &#8230;&#8203;</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>deleteItem 2</code><br>
+Deletes the 2nd item in ItemList.</p>
 </li>
 <li>
-<p><strong>Find</strong> : <code>find KEYWORD [MORE_KEYWORDS]</code><br>
-e.g. <code>find James Jake</code></p>
+<p><code>deleteItem 13</code><br>
+Deletes the 13th item in ItemList.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="edit-an-item-code-edititem-code"><a class="link" href="#edit-an-item-code-edititem-code">4.4.3. Edit an item: <code>editItem</code></a></h4>
+<div class="paragraph">
+<p>Edits an existing item in the ItemList.
+Format: <code>editItem INDEX [n/ITEM_NAME] [q/ITEM_QUANTITY] [l/ITEM_LOCATION]</code></p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>Edits the item at the specified <code>INDEX</code>. The index refers to the index number shown in the displayed item list. The index <strong>must be a positive integer</strong> 1, 2, 3, &#8230;&#8203;</p>
 </li>
 <li>
-<p><strong>List</strong> : <code>list</code></p>
+<p>At least one of the optional fields must be provided.</p>
 </li>
+<li>
+<p>Existing values will be updated to the input values.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>editItem 2 l/Cabinet</code><br>
+Edits the location of the 2nd item to be <code>Cabinet</code>.</p>
+</li>
+<li>
+<p><code>editItem 1 n/Soccer Balls q/4</code><br>
+Edits the name and quantity of the 1st item to be <code>Soccer Balls</code> and <code>6</code> respectively.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="increase-quantity-of-an-item-code-increaseitem-code"><a class="link" href="#increase-quantity-of-an-item-code-increaseitem-code">4.4.4. Increase quantity of an item: <code>increaseItem</code></a></h4>
+<div class="paragraph">
+<p>Increases the quantity of existing item in the ItemList.
+Format: <code>increaseItem INDEX q/ITEM_QUANTITY</code></p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>Increases the quantity of the item at the specified <code>INDEX</code>. The index refers to the index number shown in the displayed item list. The index <strong>must be a positive integer</strong> 1, 2, 3, &#8230;&#8203;</p>
+</li>
+<li>
+<p>Input quantities will be added to the existing quantities.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>increaseItem 2 q/1</code><br>
+Increases the quantity of the 2nd item by <code>1</code>.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="decrease-quantity-of-an-item-code-decreaseitem-code"><a class="link" href="#decrease-quantity-of-an-item-code-decreaseitem-code">4.4.5. Decrease quantity of an item: <code>decreaseItem</code></a></h4>
+<div class="paragraph">
+<p>Decreases the quantity of existing item in the ItemList.
+Format: <code>decreaseItem INDEX q/ITEM_QUANTITY</code></p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>Decreases the quantity of the item at the specified <code>INDEX</code>. The index refers to the index number shown in the displayed item list. The index <strong>must be a positive integer</strong> 1, 2, 3, &#8230;&#8203;</p>
+</li>
+<li>
+<p>Existing quantities will be subtracted by the input quantities.</p>
+</li>
+<li>
+<p>Input quantities must be lower than the existing quantities.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>decreaseItem 2 q/1</code><br>
+Decreases the quantity of the 2nd item by <code>1</code>.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="locating-items-by-name-code-finditem-code"><a class="link" href="#locating-items-by-name-code-finditem-code">4.4.6. Locating items by name: <code>findItem</code></a></h4>
+<div class="paragraph">
+<p>Finds items whose names contain any of the given keywords.<br>
+Format: <code>find KEYWORD [MORE_KEYWORDS]</code></p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>The search is case insensitive. e.g <code>Balls</code> will match <code>balls</code></p>
+</li>
+<li>
+<p>The order of the keywords does not matter. e.g. <code>Soccer Balls</code> will match <code>Balls Soccer</code></p>
+</li>
+<li>
+<p>Only the name is searched.</p>
+</li>
+<li>
+<p>Only full words will be matched e.g. <code>Ball</code> will not match <code>Balls</code></p>
+</li>
+<li>
+<p>Items matching at least one keyword will be returned (i.e. <code>OR</code> search). e.g. <code>Soccer Balls</code> will return <code>Soccer Boots</code>, <code>Tennis Balls</code></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>find Balls</code><br>
+Returns <code>balls</code> and <code>Soccer Balls</code></p>
+</li>
+<li>
+<p><code>find White Soccer Balls</code><br>
+Returns any item having names <code>White</code>, <code>Soccer</code>, or <code>Balls</code></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="listing-all-items-code-listitems-code"><a class="link" href="#listing-all-items-code-listitems-code">4.4.7. Listing all items : <code>listItems</code></a></h4>
+<div class="paragraph">
+<p>Shows a list of all items in the ClubHub.<br>
+Format: <code>listItems</code></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="record-feature-code-coming-in-v2-0-code"><a class="link" href="#record-feature-code-coming-in-v2-0-code">5. Record feature <code>[coming in v2.0]</code></a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Record feature allows the user to update many new club information all at once.</p>
+</div>
+<div class="paragraph">
+<p>For Example:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>`Bernice` pays `$100` membership fee, attends `Basketball training on 01/11` and borrows `1 chair`.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In order to record this information on Clubhub, the user just has to enter the following command:</p>
+</div>
+<div class="paragraph">
+<p><code>AddRecord M/Bernice d/10/10 b/100 D/01/11 n/chair q/-1</code></p>
+</div>
+<div class="paragraph">
+<p>This command will do the following:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Look for the name Bernice to see whether it already exists in Clubhub
+(It will inform the user that the input is invalid if the name does not already exist in Clubhub)</p>
+</li>
+<li>
+<p>Add a ledger in <code>Club Account</code> panel and update the balance accordingly</p>
+</li>
+<li>
+<p>Add a basketball event on 01/11 in <code>Club Calendar</code></p>
+</li>
+<li>
+<p>Take away 1 chair from the inventory from <code>Club Inventory</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Furthermore, there will a panel at the bottom of Clubhub to show history of all the <code>Records</code> added</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/AddRecordUI.PNG" alt="AddRecordUI" width="790">
+</div>
+<div class="title">Figure 1. Sample New UI</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="faq"><a class="link" href="#faq">6. FAQ</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>Q</strong>: How do I transfer my data to another Computer?<br>
+<strong>A</strong>: Install the app in the other computer and overwrite the empty data file it creates with the file that contains the data of your previous ClubHub folder.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="command-summary"><a class="link" href="#command-summary">7. Command Summary</a></h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
 <li>
 <p><strong>Help</strong> : <code>help</code></p>
 </li>
@@ -628,7 +1092,79 @@ e.g.<code>select 2</code></p>
 <li>
 <p><strong>Redo</strong> : <code>redo</code></p>
 </li>
+<li>
+<p><strong>UndoAll</strong> : <code>undoAll</code></p>
+</li>
+<li>
+<p><strong>RedoAll</strong> : <code>redoAll</code></p>
+</li>
+<li>
+<p><strong>List</strong> : <code>list</code></p>
+</li>
+<li>
+<p><strong>Addmember</strong> : <code>addmember n/NAME p/PHONE_NUMBER e/EMAIL a/ADDRESS c/POSTALCODE m/MAJOR [t/TAG]…​</code></p>
+</li>
+<li>
+<p><strong>Editmember</strong> : <code>editmember INDEX [n/NAME] [p/PHONE] [e/EMAIL] [a/ADDRESS] [c/POSTALCODE] [m/MAJOR] [t/TAG]…​</code></p>
+</li>
+<li>
+<p><strong>Findbyname</strong> : <code>find KEYWORD [MORE_KEYWORDS]</code></p>
+</li>
+<li>
+<p><strong>Findbymajor</strong> : <code>findmajor KEYWORD [MORE_KEYWORDS]</code></p>
+</li>
+<li>
+<p><strong>Findbyphonenumber</strong> : <code>findphone KEYWORD [MORE_KEYWORDS]</code></p>
+</li>
+<li>
+<p><strong>Findbypostalcode</strong> : <code>findpostalcode KEYWORD [MORE_KEYWORDS]</code></p>
+</li>
+<li>
+<p><strong>Deletemember</strong> : <code>delete INDEX</code></p>
+</li>
+<li>
+<p><strong>AddLedger</strong>: <code>addLedger d/[DD/MM]</code></p>
+</li>
+<li>
+<p><strong>DeleteLedger</strong> : <code>deleteLedger d/[DD/MM]</code></p>
+</li>
+<li>
+<p><strong>Credit</strong>: <code>credit d/[DD/MM] b/[NUM]</code></p>
+</li>
+<li>
+<p><strong>Debit</strong>: <code>debit d/[DD/MM] b/[NUM]</code></p>
+</li>
+<li>
+<p><strong>AddEvent</strong> : <code>addEvent n/EVENT_NAME v/VENUE d/DESCRIPTION D/EVENT_DATE</code></p>
+</li>
+<li>
+<p><strong>EditEvent</strong> : <code>editEvent EVENT_NAME to EVENT_NAME EVENT_DATE EVENT_LOCATION EVENT_DESCRIPTION</code></p>
+</li>
+<li>
+<p><strong>DeleteEvent</strong> : <code>deleteEvent n/EVENT_NAME</code></p>
+</li>
+<li>
+<p><strong>AddItem</strong> : <code>addItem n/ITEM_NAME q/ITEM_QUANTITY l/ITEM_LOCATION</code></p>
+</li>
+<li>
+<p><strong>DeleteItem</strong> : <code>deleteItem INDEX</code></p>
+</li>
+<li>
+<p><strong>EditItem</strong> : <code>editItem INDEX [n/ITEM_NAME] [q/ITEM_QUANTITY] [l/ITEM_LOCATION]</code></p>
+</li>
+<li>
+<p><strong>IncreaseItem</strong> : <code>increaseItem INDEX q/ITEM_QUANTITY</code></p>
+</li>
+<li>
+<p><strong>DecreaseItem</strong> : <code>decreaseItem INDEX q/ITEM_QUANTITY</code></p>
+</li>
+<li>
+<p><strong>FindItem</strong> : <code>findItem KEYWORD [MORE_KEYWORDS]</code></p>
+</li>
+<li>
+<p><strong>ListItem</strong> : <code>listItems</code></p>
+</li>
 </ul>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-09-24 10:26:17 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-11-12 14:59:11 UTC</div></div></div></body></html>

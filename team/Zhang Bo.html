@@ -1,0 +1,171 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]--><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="Asciidoctor 1.5.6.1"><title>Zhang Bo - Project Portfolio</title><link rel="stylesheet" href="../stylesheets/gh-pages.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="../stylesheets/coderay-asciidoctor.css"></head><body class="article"><div id="seedu-header"><nav class="navbar navbar-lg navbar-light bg-lighter"><div class="container"><a class="navbar-brand" href="https://se-edu.github.io/"><img src="../images/SeEduLogo.png" alt="SE-EDU"></a><ul class="navbar-nav"><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/addressbook-level1">AB-1</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/addressbook-level2">AB-2</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/addressbook-level3">AB-3</a></li><li class="nav-item"><a class="nav-link active" href="../index.html">AB-4</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/collate">Collate</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/se-book">Book</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/learningresources">Resources</a></li></ul></div></nav></div><div id="site-header"><nav class="navbar navbar-light bg-light"><div class="container"><a class="navbar-brand" href="../index.html">main</a><ul class="navbar-nav"><li class="nav-item"><a class="nav-link" href="../UserGuide.html">User Guide</a></li><li class="nav-item"><a class="nav-link" href="../DeveloperGuide.html">Developer Guide</a></li><li class="nav-item"><a class="nav-link" href="../LearningOutcomes.html">LOs</a></li><li class="nav-item"><a class="nav-link active" href="../AboutUs.html">About Us</a></li><li class="nav-item"><a class="nav-link" href="../ContactUs.html">Contact Us</a></li><li class="navitem"><a class="nav-link" href="https://github.com/CS2113-AY1819S1-T09-3/main"><span class="fa fa-github fa-lg" aria-hidden="true"></span>&nbsp;View on GitHub</a></li></ul></div></nav></div><div id="header"><h1>Zhang Bo - Project Portfolio</h1></div><div id="content"><div class="sect1">
+<h2 id="project-clubhub"><a class="link" href="#project-clubhub">PROJECT: ClubHub</a></h2>
+<div class="sectionbody">
+<hr>
+</div>
+</div>
+<div class="sect1">
+<h2 id="overview"><a class="link" href="#overview">Overview</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>ClubHub is a desktop application for Club leaders or managers to manage their club. The user interacts with the program using a Command Line Interface (CLI), and it has a Graphic User Interface (GUI) created with JavaFX. It is written in Java and has about 10 thousand lines of codes.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="summary-of-contributions"><a class="link" href="#summary-of-contributions">Summary of Contributions:</a></h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Major enhancement</strong>: generate a calendar to record and manage events</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Event</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>An event contains four elements: name, venue, description, and date.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>addEvent</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>What it does: It allows users to add an event to the ClubHub.</p>
+</li>
+<li>
+<p>Justification: We design this command because it is necessary to add and event to the ClubHub to generate a event list, which can also be called as calendar If users want to use the it later.</p>
+</li>
+<li>
+<p>Highlights: This command is the most basic command but the most significant one.</p>
+</li>
+<li>
+<p>Example: <code>addEvent n/meeting v/meeting room D/be punctual d/10/12</code> ---Add an event named <code>meeting</code>, venue is <code>meeting room</code>, description is <code>be punctual</code>, date is <code>10/12</code>.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>deleteEvent</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>What it does: It allows users to delete a certain event.</p>
+</li>
+<li>
+<p>Highlights: This command is necessary for users when they made a mistakes and want to delete a certain event.</p>
+</li>
+<li>
+<p>Example: <code>delete 1</code> --- Delete the event who&#8217;s index is 1.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>editEvent</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>What it does: It allows users to edit a existing event in the event list.</p>
+</li>
+<li>
+<p>Example: <code>editEvent 1 n/meeting v/university town D/bring your materials d/10/12</code> ---Edit the event who&#8217;s index is 1.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>listEvent</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>What it does: It allows users to list all the events in the ClubHub.</p>
+</li>
+<li>
+<p>Example: <code>listEvent</code></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Code contributed</strong> [<a href="https://github.com/CS2113-AY1819S1-T09-3/main">functional code</a>] [[test code]]</p>
+</li>
+<li>
+<p><strong>Other contribution</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Fixed many checkstyle errors in our team(Pull Request #102, #96, #64).</p>
+</li>
+<li>
+<p>Fix some bus of my teammate. (example: change the date format from “[0-2][0-9]||3[0-1]/1[0-2]||[0-9]” to “0[1-9]||[1-2][0-9]||3[0-1]/[1[0-2]||0[1-9]” .</p>
+</li>
+<li>
+<p>Contributions to forum discussion.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="contribution-to-user-guide"><a class="link" href="#contribution-to-user-guide">Contribution to User Guide</a></h2>
+<div class="sectionbody">
+
+</div>
+</div>
+<div class="sect1">
+<h2 id="contribution-to-developer-guide"><a class="link" href="#contribution-to-developer-guide">Contribution to Developer Guide</a></h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Design considerations</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Aspect: implementation of listEvent</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Alternative 1 (current choice): list all the events in the event list.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>It will list all the events with the index order 1,2,3&#8230;&#8203;</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Alternative 2 : list all the events sorted by date.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>It will sort the events with their date and list all of them out.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-11-12 14:59:11 UTC</div></div></div></body></html>
