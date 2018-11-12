@@ -93,9 +93,19 @@ corresponding sets of parsers and commands.</p>
 </li>
 <li>
 <p><strong>Minor enhancement</strong>: changed the duplicate check feature to fit the University context of the Clubhub better.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Originally, it is recognized as <strong>unique</strong> only if the <code>new name</code> is added or <strong>same</strong> name with <strong>different</strong> <code>phone number</code> and <code>email address</code> is added.</p>
 </li>
 <li>
-<p><strong>Code contributed</strong>: [<a href="https://github.com">Functional code</a>] [<a href="https://github.com">Test code</a>] <em>{give links to collated code files}</em></p>
+<p>Now, it is recognized as <strong>unique</strong> only if the <code>new name</code> is added or <strong>same</strong> name with <strong>different</strong> <code>phone number</code> and <code>major</code> is added</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Code contributed</strong>: [<a href="https://nuscs2113-ay1819s1.github.io/dashboard/#=undefined&amp;search=hyukiejun">RepoSense</a>]</p>
 </li>
 <li>
 <p><strong>Other contributions</strong>:</p>
@@ -106,7 +116,7 @@ corresponding sets of parsers and commands.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>Managed releases <code>v1.3</code> - <code>v1.5rc</code> (3 releases) on GitHub</p>
+<p>Managed releases <code>v1.2</code> - <code>v1.4</code> (3 releases) on GitHub</p>
 </li>
 </ul>
 </div>
@@ -116,63 +126,28 @@ corresponding sets of parsers and commands.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>Updated the GUI color scheme (Pull requests <a href="https://github.com">#33</a>, <a href="https://github.com">#34</a>)</p>
-</li>
-<li>
-<p>Wrote additional tests for existing features to increase coverage from 88% to 92% (Pull requests <a href="https://github.com">#36</a>, <a href="https://github.com">#38</a>)</p>
+<p>Wrote additional tests for the newly added attributes of the member object (Pull requests: <a href="https://github.com/CS2113-AY1819S1-T09-3/main/pull/36">#36</a>, <a href="https://github.com/CS2113-AY1819S1-T09-3/main/pull/47">#47</a>)</p>
 </li>
 </ul>
 </div>
 </li>
 <li>
-<p>Documentation:</p>
+<p>Version 2.0 Feature</p>
 <div class="ulist">
 <ul>
 <li>
-<p>Did cosmetic tweaks to existing contents of the User Guide: <a href="https://github.com">#14</a></p>
+<p>Thought of a potential integration feature [Records] for version 2.0 and updated the User guide accordingly</p>
 </li>
 </ul>
 </div>
 </li>
 <li>
-<p>Community:</p>
-<div class="ulist">
-<ul>
-<li>
-<p>PRs reviewed (with non-trivial review comments): <a href="https://github.com">#12</a>, <a href="https://github.com">#32</a>, <a href="https://github.com">#19</a>, <a href="https://github.com">#42</a></p>
-</li>
-<li>
-<p>Contributed to forum discussions (examples:  <a href="https://github.com">1</a>, <a href="https://github.com">2</a>, <a href="https://github.com">3</a>, <a href="https://github.com">4</a>)</p>
-</li>
-<li>
-<p>Reported bugs and suggestions for other teams in the class (examples:  <a href="https://github.com">1</a>, <a href="https://github.com">2</a>, <a href="https://github.com">3</a>)</p>
-</li>
-<li>
-<p>Some parts of the history feature I added was adopted by several other class mates (<a href="https://github.com">1</a>, <a href="https://github.com">2</a>)</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>Tools:</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Integrated a third party library (Natty) to the project (<a href="https://github.com">#42</a>)</p>
-</li>
-<li>
-<p>Integrated a new Github plugin (CircleCI) to the team repo</p>
+<p>Reported bugs and suggestions for other teams in the class (Issues: <a href="https://github.com/CS2113-AY1819S1-T12-2/main/issues/162">#162</a>, <a href="https://github.com/CS2113-AY1819S1-T12-2/main/issues/164">#164</a>, <a href="https://github.com/CS2113-AY1819S1-T12-2/main/issues/170">#170</a>, <a href="https://github.com/CS2113-AY1819S1-T12-2/main/issues/173">#173</a>, <a href="https://github.com/CS2113-AY1819S1-T12-2/main/issues/179">#179</a>)</p>
 </li>
 </ul>
 </div>
 </li>
 </ul>
-</div>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p><em>{you can add/remove categories in the list above}</em></p>
 </div>
 </div>
 </div>
@@ -190,21 +165,21 @@ corresponding sets of parsers and commands.</p>
 </tbody>
 </table>
 <div class="sect2">
-<h3 id="undoing-previous-command"><a class="link" href="#undoing-previous-command">Undoing previous command</a></h3>
+<h3 id="members"><a class="link" href="#members">Members</a></h3>
+<div class="sect3">
+<h4 id="adding-a-member-code-addmember-code"><a class="link" href="#adding-a-member-code-addmember-code">Adding a member: <code>addmember</code></a></h4>
 <div class="paragraph">
-<p>Restores ClubHub to the state before the previous <em>undoable</em> command was executed.<br>
-Format: <code>undo</code></p>
+<p>Adds a person to the ClubHub<br>
+Format: <code>addmember n/NAME p/PHONE_NUMBER e/EMAIL a/ADDRESS c/POSTALCODE m/MAJOR [t/TAG]&#8230;&#8203;</code></p>
 </div>
-<div class="admonitionblock note">
+<div class="admonitionblock tip">
 <table>
 <tr>
 <td class="icon">
-<i class="fa icon-note" title="Note"></i>
+<i class="fa icon-tip" title="Tip"></i>
 </td>
 <td class="content">
-<div class="paragraph">
-<p>Undoable commands: those commands that modify ClubHub&#8217;s content (<code>add</code>, <code>delete</code>, <code>edit</code> and <code>clear</code>).</p>
-</div>
+A person can have any number of tags (including 0)
 </td>
 </tr>
 </table>
@@ -215,30 +190,39 @@ Format: <code>undo</code></p>
 <div class="ulist">
 <ul>
 <li>
-<p><code>delete 1</code><br>
-<code>list</code><br>
-<code>undo</code> (reverses the <code>delete 1</code> command)<br></p>
-</li>
-<li>
-<p><code>select 1</code><br>
-<code>list</code><br>
-<code>undo</code><br>
-The <code>undo</code> command fails as there are no undoable commands executed previously.</p>
-</li>
-<li>
-<p><code>delete 1</code><br>
-<code>clear</code><br>
-<code>undo</code> (reverses the <code>clear</code> command)<br>
-<code>undo</code> (reverses the <code>delete 1</code> command)<br></p>
+<p><code>addmember n/John Doe p/98765432 e/johnd@example.com a/311, Clementi Ave 2, #02-25 c/609653 m/Computer engineering t/friends t/owesMoney</code></p>
 </li>
 </ul>
 </div>
 </div>
-<div class="sect2">
-<h3 id="redoing-the-previously-undone-command"><a class="link" href="#redoing-the-previously-undone-command">Redoing the previously undone command</a></h3>
+<div class="sect3">
+<h4 id="editing-a-member-code-editmember-code"><a class="link" href="#editing-a-member-code-editmember-code">Editing a member : <code>editmember</code></a></h4>
 <div class="paragraph">
-<p>Reverses the most recent <code>undo</code> command.<br>
-Format: <code>redo</code></p>
+<p>Edits an existing person in the ClubHub.<br>
+Format: <code>editmember INDEX [n/NAME] [p/PHONE] [e/EMAIL] [a/ADDRESS] [c/POSTALCODE] [m/MAJOR] [t/TAG]&#8230;&#8203;</code></p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>Edits the person at the specified <code>INDEX</code>. The index refers to the index number shown in the displayed person list. The index <strong>must be a positive integer</strong> 1, 2, 3, &#8230;&#8203;</p>
+</li>
+<li>
+<p>At least one of the optional fields must be provided.</p>
+</li>
+<li>
+<p>Existing values will be updated to the input values.</p>
+</li>
+<li>
+<p>When editing tags, the existing tags of the person will be removed i.e adding of tags is not cumulative.</p>
+</li>
+<li>
+<p>You can remove all the person&#8217;s tags by typing <code>t/</code> without specifying any tags after it.</p>
+</li>
+</ul>
+</div>
+</div>
 </div>
 <div class="paragraph">
 <p>Examples:</p>
@@ -246,31 +230,373 @@ Format: <code>redo</code></p>
 <div class="ulist">
 <ul>
 <li>
-<p><code>delete 1</code><br>
-<code>undo</code> (reverses the <code>delete 1</code> command)<br>
-<code>redo</code> (reapplies the <code>delete 1</code> command)<br></p>
+<p><code>editmember 1 p/91234567 e/johndoe@example.com</code><br>
+Edits the phone number and email address of the 1st person to be <code>91234567</code> and <code>johndoe@example.com</code> respectively.</p>
 </li>
 <li>
-<p><code>delete 1</code><br>
-<code>redo</code><br>
-The <code>redo</code> command fails as there are no <code>undo</code> commands executed previously.</p>
-</li>
-<li>
-<p><code>delete 1</code><br>
-<code>clear</code><br>
-<code>undo</code> (reverses the <code>clear</code> command)<br>
-<code>undo</code> (reverses the <code>delete 1</code> command)<br>
-<code>redo</code> (reapplies the <code>delete 1</code> command)<br>
-<code>redo</code> (reapplies the <code>clear</code> command)<br></p>
+<p><code>editmember 2 n/Betsy Crower t/</code><br>
+Edits the name of the 2nd person to be <code>Betsy Crower</code> and clears all existing tags.</p>
 </li>
 </ul>
 </div>
 </div>
-<div class="sect2">
-<h3 id="encrypting-data-files-code-coming-in-v2-0-code"><a class="link" href="#encrypting-data-files-code-coming-in-v2-0-code">Encrypting data files <code>[coming in v2.0]</code></a></h3>
+<div class="sect3">
+<h4 id="locating-members-by-name-code-find-code"><a class="link" href="#locating-members-by-name-code-find-code">Locating members by name: <code>find</code></a></h4>
 <div class="paragraph">
-<p><em>{explain how the user can enable/disable data encryption}</em></p>
+<p>Finds persons whose names contain any of the given keywords.<br>
+Format: <code>find KEYWORD [MORE_KEYWORDS]</code></p>
 </div>
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>The search is case insensitive. e.g <code>hans</code> will match <code>Hans</code></p>
+</li>
+<li>
+<p>The order of the keywords does not matter. e.g. <code>Hans Bo</code> will match <code>Bo Hans</code></p>
+</li>
+<li>
+<p>Only the name is searched.</p>
+</li>
+<li>
+<p>Only full words will be matched e.g. <code>Han</code> will not match <code>Hans</code></p>
+</li>
+<li>
+<p>Persons matching at least one keyword will be returned (i.e. <code>OR</code> search). e.g. <code>Hans Bo</code> will return <code>Hans Gruber</code>, <code>Bo Yang</code></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>find John</code><br>
+Returns <code>john</code> and <code>John Doe</code></p>
+</li>
+<li>
+<p><code>find Betsy Tim John</code><br>
+Returns any person having names <code>Betsy</code>, <code>Tim</code>, or <code>John</code></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="locating-members-by-major-code-findmajor-code"><a class="link" href="#locating-members-by-major-code-findmajor-code">Locating members by major: <code>findmajor</code></a></h4>
+<div class="paragraph">
+<p>Finds persons whose names contain any of the given keywords.<br>
+Format: <code>findmajor KEYWORD [MORE_KEYWORDS]</code></p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>The search is case insensitive. e.g <code>computer</code> will match <code>Computer</code></p>
+</li>
+<li>
+<p>The order of the keywords does not matter. e.g. <code>Engineering computer</code> will match <code>Computer engineering</code></p>
+</li>
+<li>
+<p>Only the name is searched.</p>
+</li>
+<li>
+<p>Majors matching at least one keyword will be returned e.g ` Computer Engineering` will be listed when <code>Engineering</code> is searched</p>
+</li>
+<li>
+<p>Only full words will be matched e.g. <code>Compute</code> will not match <code>Computer</code></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>findmajor Computer Engineering</code><br>
+Returns member whose major is <code>Computer Engineering</code></p>
+</li>
+<li>
+<p><code>findmajor Engineering</code><br>
+Returns members whose major contains the keyword <code>Engineering</code></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="locating-members-by-phone-number-code-findphone-code"><a class="link" href="#locating-members-by-phone-number-code-findphone-code">Locating members by phone number: <code>findphone</code></a></h4>
+<div class="paragraph">
+<p>Finds persons whose names contain any of the given keywords.<br>
+Format: <code>findphone KEYWORD [MORE_KEYWORDS]</code></p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>The order of the keywords does not matter.</p>
+</li>
+<li>
+<p>Only the phone number is searched.</p>
+</li>
+<li>
+<p>Only full numbers will be matched e.g. <code>9723</code> will not match <code>97233234</code></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>findphone 97233234</code><br>
+Returns member whose phone number is <code>97233234</code></p>
+</li>
+<li>
+<p><code>findphone 97233234 84280511</code><br>
+Returns members whose phone numbers are`97233234 or 84280511'</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="locating-members-by-postalcode-code-findpostalcode-code"><a class="link" href="#locating-members-by-postalcode-code-findpostalcode-code">Locating members by postalcode: <code>findpostalcode</code></a></h4>
+<div class="paragraph">
+<p>Finds persons whose names contain any of the given keywords.<br>
+Format: <code>findpostalcode KEYWORD [MORE_KEYWORDS]</code></p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>The order of the keywords does not matter.</p>
+</li>
+<li>
+<p>Only the postalcode is searched.</p>
+</li>
+<li>
+<p>Only full numbers will be matched e.g. <code>609</code> will not match <code>609653</code></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>findpostalcode 609653</code><br>
+Returns member whose postalcode is <code>609653</code></p>
+</li>
+<li>
+<p><code>findpostalcode 609653 555555</code><br>
+Returns members whose postalcodes are <code>609653 or 555555</code></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="deleting-a-member-code-delete-code"><a class="link" href="#deleting-a-member-code-delete-code">Deleting a member : <code>delete</code></a></h4>
+<div class="paragraph">
+<p>Deletes the specified person from ClubHub.<br>
+Format: <code>delete INDEX</code></p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>Deletes the person at the specified <code>INDEX</code>.</p>
+</li>
+<li>
+<p>The index refers to the index number shown in the displayed person list.</p>
+</li>
+<li>
+<p>The index <strong>must be a positive integer</strong> 1, 2, 3, &#8230;&#8203;</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>list</code><br>
+<code>delete 2</code><br>
+Deletes the 2nd person in ClubHub.</p>
+</li>
+<li>
+<p><code>find Betsy</code><br>
+<code>delete 1</code><br>
+Deletes the 1st person in the results of the <code>find</code> command.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="record-feature-code-coming-in-v2-0-code"><a class="link" href="#record-feature-code-coming-in-v2-0-code">Record feature <code>[coming in v2.0]</code></a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Record feature allows the user to update many new club information all at once.</p>
+</div>
+<div class="paragraph">
+<p>For Example:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>`Bernice` pays `$100` membership fee, attends `Basketball training on 01/11` and borrows `1 chair`.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In order to record this information on Clubhub, the user just has to enter the following command:</p>
+</div>
+<div class="paragraph">
+<p><code>AddRecord M/Bernice d/10/10 b/100 D/01/11 n/chair q/-1</code></p>
+</div>
+<div class="paragraph">
+<p>This command will do the following:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Look for the name Bernice to see whether it already exists in Clubhub
+(It will inform the user that the input is invalid if the name does not already exist in Clubhub)</p>
+</li>
+<li>
+<p>Add a ledger in <code>Club Account</code> panel and update the balance accordingly</p>
+</li>
+<li>
+<p>Add a basketball event on 01/11 in <code>Club Calendar</code></p>
+</li>
+<li>
+<p>Take away 1 chair from the inventory from <code>Club Inventory</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Furthermore, there will a panel at the bottom of Clubhub to show history of all the <code>Records</code> added</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/AddRecordUI.PNG" alt="AddRecordUI" width="790">
+</div>
+<div class="title">Figure 1. Sample New UI</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="command-summary"><a class="link" href="#command-summary">Command Summary</a></h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Help</strong> : <code>help</code></p>
+</li>
+<li>
+<p><strong>Select</strong> : <code>select INDEX</code><br>
+e.g.<code>select 2</code></p>
+</li>
+<li>
+<p><strong>History</strong> : <code>history</code></p>
+</li>
+<li>
+<p><strong>Undo</strong> : <code>undo</code></p>
+</li>
+<li>
+<p><strong>Redo</strong> : <code>redo</code></p>
+</li>
+<li>
+<p><strong>UndoAll</strong> : <code>undoAll</code></p>
+</li>
+<li>
+<p><strong>RedoAll</strong> : <code>redoAll</code></p>
+</li>
+<li>
+<p><strong>List</strong> : <code>list</code></p>
+</li>
+<li>
+<p><strong>Addmember</strong> : <code>addmember n/NAME p/PHONE_NUMBER e/EMAIL a/ADDRESS c/POSTALCODE m/MAJOR [t/TAG]…​</code></p>
+</li>
+<li>
+<p><strong>Editmember</strong> : <code>editmember INDEX [n/NAME] [p/PHONE] [e/EMAIL] [a/ADDRESS] [c/POSTALCODE] [m/MAJOR] [t/TAG]…​</code></p>
+</li>
+<li>
+<p><strong>Findbyname</strong> : <code>find KEYWORD [MORE_KEYWORDS]</code></p>
+</li>
+<li>
+<p><strong>Findbymajor</strong> : <code>findmajor KEYWORD [MORE_KEYWORDS]</code></p>
+</li>
+<li>
+<p><strong>Findbyphonenumber</strong> : <code>findphone KEYWORD [MORE_KEYWORDS]</code></p>
+</li>
+<li>
+<p><strong>Findbypostalcode</strong> : <code>findpostalcode KEYWORD [MORE_KEYWORDS]</code></p>
+</li>
+<li>
+<p><strong>Deletemember</strong> : <code>delete INDEX</code></p>
+</li>
+<li>
+<p><strong>AddLedger</strong>: <code>addLedger d/[DD/MM]</code></p>
+</li>
+<li>
+<p><strong>DeleteLedger</strong> : <code>deleteLedger d/[DD/MM]</code></p>
+</li>
+<li>
+<p><strong>Credit</strong>: <code>credit d/[DD/MM] b/[NUM]</code></p>
+</li>
+<li>
+<p><strong>Debit</strong>: <code>debit d/[DD/MM] b/[NUM]</code></p>
+</li>
+<li>
+<p><strong>AddEvent</strong> : <code>addEvent n/EVENT_NAME v/VENUE d/DESCRIPTION D/EVENT_DATE</code></p>
+</li>
+<li>
+<p><strong>EditEvent</strong> : <code>editEvent EVENT_NAME to EVENT_NAME EVENT_DATE EVENT_LOCATION EVENT_DESCRIPTION</code></p>
+</li>
+<li>
+<p><strong>DeleteEvent</strong> : <code>deleteEvent n/EVENT_NAME</code></p>
+</li>
+<li>
+<p><strong>AddItem</strong> : <code>addItem n/ITEM_NAME q/ITEM_QUANTITY l/ITEM_LOCATION</code></p>
+</li>
+<li>
+<p><strong>DeleteItem</strong> : <code>deleteItem INDEX</code></p>
+</li>
+<li>
+<p><strong>EditItem</strong> : <code>editItem INDEX [n/ITEM_NAME] [q/ITEM_QUANTITY] [l/ITEM_LOCATION]</code></p>
+</li>
+<li>
+<p><strong>IncreaseItem</strong> : <code>increaseItem INDEX q/ITEM_QUANTITY</code></p>
+</li>
+<li>
+<p><strong>DecreaseItem</strong> : <code>decreaseItem INDEX q/ITEM_QUANTITY</code></p>
+</li>
+<li>
+<p><strong>FindItem</strong> : <code>findItem KEYWORD [MORE_KEYWORDS]</code></p>
+</li>
+<li>
+<p><strong>ListItem</strong> : <code>listItems</code></p>
+</li>
+</ul>
 </div>
 </div>
 </div>
@@ -288,221 +614,101 @@ The <code>redo</code> command fails as there are no <code>undo</code> commands e
 </tbody>
 </table>
 <div class="sect2">
-<h3 id="undo-redo-feature"><a class="link" href="#undo-redo-feature">Undo/Redo feature</a></h3>
+<h3 id="member"><a class="link" href="#member">Member</a></h3>
+<div class="ulist">
+<ul>
+<li>
+<p>As of V1.4, the commands related to the member component that are fully functional are:
+addmember, editmember, find, findmajor, findphone, findpostalcode and delete.</p>
+</li>
+</ul>
+</div>
 <div class="sect3">
-<h4 id="current-implementation"><a class="link" href="#current-implementation">Current Implementation</a></h4>
+<h4 id="add-remove-edit-member-feature"><a class="link" href="#add-remove-edit-member-feature">Add/Remove/Edit member feature</a></h4>
 <div class="paragraph">
-<p>The undo/redo mechanism is facilitated by <code>VersionedAddressBook</code>.
-It extends <code>AddressBook</code> with an undo/redo history, stored internally as an <code>addressBookStateList</code> and <code>currentStatePointer</code>.
-Additionally, it implements the following operations:</p>
+<p>The add/remove mechanism is facilitated by <code>VersionedAddressBook</code>. It extends <code>AddressBook</code> model with an Addmember, Editmember and
+<code>Delete</code> method.</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p><code>VersionedAddressBook#commit()</code>&#8201;&#8212;&#8201;Saves the current address book state in its history.</p>
+<p><code>AddressBook#addPerson()</code>&#8201;&#8212;&#8201;Adds a member object to the UniquePersonList.</p>
 </li>
 <li>
-<p><code>VersionedAddressBook#undo()</code>&#8201;&#8212;&#8201;Restores the previous address book state from its history.</p>
-</li>
-<li>
-<p><code>VersionedAddressBook#redo()</code>&#8201;&#8212;&#8201;Restores a previously undone address book state from its history.</p>
+<p><code>AddressBook#removePerson()</code>&#8201;&#8212;&#8201;Removes a member object from the UniquePersonList.</p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p>These operations are exposed in the <code>Model</code> interface as <code>Model#commitAddressBook()</code>, <code>Model#undoAddressBook()</code> and <code>Model#redoAddressBook()</code> respectively.</p>
+<p>These operations are exposed in the <code>Model</code> interface as <code>Model#addPerson</code> and <code>Model#deletePerson</code> respectively.</p>
 </div>
 <div class="paragraph">
-<p>Given below is an example usage scenario and how the undo/redo mechanism behaves at each step.</p>
+<p>Below is a scenario of how a user adds a member into Clubhub.</p>
 </div>
 <div class="paragraph">
-<p>Step 1. The user launches the application for the first time. The <code>VersionedAddressBook</code> will be initialized with the initial address book state, and the <code>currentStatePointer</code> pointing to that single address book state.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/UndoRedoStartingStateListDiagram.png" alt="UndoRedoStartingStateListDiagram" width="800">
-</div>
+<p>Step 1. The user inputs the command addmember n/NAME p/PHONE_NUMBER e/EMAIL a/ADDRESS c/POSTALCODE m/MAJOR [t/TAG]
+into the command box.</p>
 </div>
 <div class="paragraph">
-<p>Step 2. The user executes <code>delete 5</code> command to delete the 5th person in the address book. The <code>delete</code> command calls <code>Model#commitAddressBook()</code>, causing the modified state of the address book after the <code>delete 5</code> command executes to be saved in the <code>addressBookStateList</code>, and the <code>currentStatePointer</code> is shifted to the newly inserted address book state.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/UndoRedoNewCommand1StateListDiagram.png" alt="UndoRedoNewCommand1StateListDiagram" width="800">
-</div>
+<p>Step 2. The commandBox ui will then create a Logic object which parses the command to ascertain that it is an addmember
+command.</p>
 </div>
 <div class="paragraph">
-<p>Step 3. The user executes <code>add n/David &#8230;&#8203;</code> to add a new person. The <code>add</code> command also calls <code>Model#commitAddressBook()</code>, causing another modified address book state to be saved into the <code>addressBookStateList</code>.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/UndoRedoNewCommand2StateListDiagram.png" alt="UndoRedoNewCommand2StateListDiagram" width="800">
-</div>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-If a command fails its execution, it will not call <code>Model#commitAddressBook()</code>, so the address book state will not be saved into the <code>addressBookStateList</code>.
-</td>
-</tr>
-</table>
+<p>Step 3. The AddressBookParser will then parse the command to create a new addmemberParser object.</p>
 </div>
 <div class="paragraph">
-<p>Step 4. The user now decides that adding the person was a mistake, and decides to undo that action by executing the <code>undo</code> command. The <code>undo</code> command will call <code>Model#undoAddressBook()</code>, which will shift the <code>currentStatePointer</code> once to the left, pointing it to the previous address book state, and restores the address book to that state.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/UndoRedoExecuteUndoStateListDiagram.png" alt="UndoRedoExecuteUndoStateListDiagram" width="800">
-</div>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-If the <code>currentStatePointer</code> is at index 0, pointing to the initial address book state, then there are no previous address book states to restore. The <code>undo</code> command uses <code>Model#canUndoAddressBook()</code> to check if this is the case. If so, it will return an error to the user rather than attempting to perform the undo.
-</td>
-</tr>
-</table>
+<p>Step 4. This AddCommandParser will parse the arguments of the command line and create a new AddPerson object.</p>
 </div>
 <div class="paragraph">
-<p>The following sequence diagram shows how the undo operation works:</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/UndoRedoSequenceDiagram.png" alt="UndoRedoSequenceDiagram" width="800">
-</div>
+<p>Step 5. This will then be put into the model, into the versioned address book.</p>
 </div>
 <div class="paragraph">
-<p>The <code>redo</code> command does the opposite&#8201;&#8212;&#8201;it calls <code>Model#redoAddressBook()</code>, which shifts the <code>currentStatePointer</code> once to the right, pointing to the previously undone state, and restores the address book to that state.</p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-If the <code>currentStatePointer</code> is at index <code>addressBookStateList.size() - 1</code>, pointing to the latest address book state, then there are no undone address book states to restore. The <code>redo</code> command uses <code>Model#canRedoAddressBook()</code> to check if this is the case. If so, it will return an error to the user rather than attempting to perform the redo.
-</td>
-</tr>
-</table>
+<p>The Member class creates an object that instantiates name, phone, email, postalcode, major, email and tag objects.
+These multiple member objects created will be stored in a UniquePersonList, where the uniqueness of every member depends
+on their names, phone number and email address. It will detect the entry as unique if it has different name or
+different phone number or email address.</p>
 </div>
 <div class="paragraph">
-<p>Step 5. The user then decides to execute the command <code>list</code>. Commands that do not modify the address book, such as <code>list</code>, will usually not call <code>Model#commitAddressBook()</code>, <code>Model#undoAddressBook()</code> or <code>Model#redoAddressBook()</code>. Thus, the <code>addressBookStateList</code> remains unchanged.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/UndoRedoNewCommand3StateListDiagram.png" alt="UndoRedoNewCommand3StateListDiagram" width="800">
-</div>
+<p>This uniqueness check is obtained through the use of the object <code>getName()</code>, <code>getPhone()</code> and <code>getEmail()</code>
+method in <code>Person</code></p>
 </div>
 <div class="paragraph">
-<p>Step 6. The user executes <code>clear</code>, which calls <code>Model#commitAddressBook()</code>. Since the <code>currentStatePointer</code> is not pointing at the end of the <code>addressBookStateList</code>, all address book states after the <code>currentStatePointer</code> will be purged. We designed it this way because it no longer makes sense to redo the <code>add n/David &#8230;&#8203;</code> command. This is the behavior that most modern desktop applications follow.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/UndoRedoNewCommand4StateListDiagram.png" alt="UndoRedoNewCommand4StateListDiagram" width="800">
-</div>
-</div>
-<div class="paragraph">
-<p>The following activity diagram summarizes what happens when a user executes a new command:</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/UndoRedoActivityDiagram.png" alt="UndoRedoActivityDiagram" width="650">
-</div>
+<p>Remove and edit member uses the similar concept and procedure but starts with looking for the Member in the
+UniquePersonList instead.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="design-considerations"><a class="link" href="#design-considerations">Design Considerations</a></h4>
-<div class="sect4">
-<h5 id="aspect-how-undo-redo-executes"><a class="link" href="#aspect-how-undo-redo-executes">Aspect: How undo &amp; redo executes</a></h5>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>Alternative 1 (current choice):</strong> Saves the entire address book.</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Pros: Easy to implement.</p>
-</li>
-<li>
-<p>Cons: May have performance issues in terms of memory usage.</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p><strong>Alternative 2:</strong> Individual command knows how to undo/redo by itself.</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Pros: Will use less memory (e.g. for <code>delete</code>, just save the person being deleted).</p>
-</li>
-<li>
-<p>Cons: We must ensure that the implementation of each individual command are correct.</p>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect4">
-<h5 id="aspect-data-structure-to-support-the-undo-redo-commands"><a class="link" href="#aspect-data-structure-to-support-the-undo-redo-commands">Aspect: Data structure to support the undo/redo commands</a></h5>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>Alternative 1 (current choice):</strong> Use a list to store the history of address book states.</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Pros: Easy for new Computer Science student undergraduates to understand, who are likely to be the new incoming developers of our project.</p>
-</li>
-<li>
-<p>Cons: Logic is duplicated twice. For example, when a new command is executed, we must remember to update both <code>HistoryManager</code> and <code>VersionedAddressBook</code>.</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p><strong>Alternative 2:</strong> Use <code>HistoryManager</code> for undo/redo</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Pros: We do not need to maintain a separate list, and just reuse what is already in the codebase.</p>
-</li>
-<li>
-<p>Cons: Requires dealing with commands that have already been undone: We must remember to skip these commands. Violates Single Responsibility Principle and Separation of Concerns as <code>HistoryManager</code> now needs to do two different things.</p>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="proposed-data-encryption"><a class="link" href="#proposed-data-encryption">[Proposed] Data Encryption</a></h3>
+<h4 id="find-by-name-major-phone-and-postalcode-feature"><a class="link" href="#find-by-name-major-phone-and-postalcode-feature">Find by name, major, phone and postalcode feature</a></h4>
 <div class="paragraph">
-<p><em>{Explain here how the data encryption feature will be implemented}</em></p>
+<p>Similarly to the add/remove/edit member features, is facilitated by <code>VersionedAddressBook</code>. It then extends
+<code>AddressBook</code> model to find, findmajor, findphone and finddpostalcode methods.</p>
 </div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="project-powerpointlabs"><a class="link" href="#project-powerpointlabs">PROJECT: PowerPointLabs</a></h2>
-<div class="sectionbody">
-<hr>
 <div class="paragraph">
-<p><em>{Optionally, you may include other projects in your portfolio.}</em></p>
+<p>These operations are exposed in the <code>Model</code> interface as <code>Model#updatePerson</code>.</p>
+</div>
+<div class="paragraph">
+<p>Below is a scenario of how a user finds a member into Clubhub.</p>
+</div>
+<div class="paragraph">
+<p>Step 1. The user inputs the command find [Valid Parameter] into the command box.</p>
+</div>
+<div class="paragraph">
+<p>Step 2. The commandBox ui will then create a Logic object which parses the command to ascertain that it is an findmember
+command</p>
+</div>
+<div class="paragraph">
+<p>Step 3. The AddressBookParser will then parse the command to create a new findmemberParser object.</p>
+</div>
+<div class="paragraph">
+<p>Step 4. This findmemberParser will parse the arguments of the command line.</p>
+</div>
+<div class="paragraph">
+<p>Step 5. By making use of the PersonContainsKeywordsPredicate, the members that has matching details would be found.</p>
+</div>
+<div class="paragraph">
+<p>Step 5. This will then be put into the model, into the versioned address book.</p>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-11-12 14:59:11 UTC</div></div></div></body></html>
+</div>
+</div>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-11-12 16:08:06 UTC</div></div></div></body></html>

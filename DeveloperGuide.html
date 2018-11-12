@@ -891,10 +891,10 @@ addmember, editmember, find, findmajor, findphone, findpostalcode and delete.</p
 </ul>
 </div>
 <div class="sect3">
-<h4 id="add-remove-member-feature"><a class="link" href="#add-remove-member-feature">3.6.1. Add/Remove member feature</a></h4>
+<h4 id="add-remove-edit-member-feature"><a class="link" href="#add-remove-edit-member-feature">3.6.1. Add/Remove/Edit member feature</a></h4>
 <div class="paragraph">
-<p>The add/remove mechanism is facilitated by <code>VersionedAddressBook</code>. It extends <code>AddressBook</code> model with an Addmember
-and Delete method.</p>
+<p>The add/remove mechanism is facilitated by <code>VersionedAddressBook</code>. It extends <code>AddressBook</code> model with an Addmember, Editmember and
+<code>Delete</code> method.</p>
 </div>
 <div class="ulist">
 <ul>
@@ -946,7 +946,35 @@ UniquePersonList instead.</p>
 </div>
 <div class="sect3">
 <h4 id="find-by-name-major-phone-and-postalcode-feature"><a class="link" href="#find-by-name-major-phone-and-postalcode-feature">3.6.2. Find by name, major, phone and postalcode feature</a></h4>
-
+<div class="paragraph">
+<p>Similarly to the add/remove/edit member features, is facilitated by <code>VersionedAddressBook</code>. It then extends
+<code>AddressBook</code> model to find, findmajor, findphone and finddpostalcode methods.</p>
+</div>
+<div class="paragraph">
+<p>These operations are exposed in the <code>Model</code> interface as <code>Model#updatePerson</code>.</p>
+</div>
+<div class="paragraph">
+<p>Below is a scenario of how a user finds a member into Clubhub.</p>
+</div>
+<div class="paragraph">
+<p>Step 1. The user inputs the command find [Valid Parameter] into the command box.</p>
+</div>
+<div class="paragraph">
+<p>Step 2. The commandBox ui will then create a Logic object which parses the command to ascertain that it is an findmember
+command</p>
+</div>
+<div class="paragraph">
+<p>Step 3. The AddressBookParser will then parse the command to create a new findmemberParser object.</p>
+</div>
+<div class="paragraph">
+<p>Step 4. This findmemberParser will parse the arguments of the command line.</p>
+</div>
+<div class="paragraph">
+<p>Step 5. By making use of the PersonContainsKeywordsPredicate, the members that has matching details would be found.</p>
+</div>
+<div class="paragraph">
+<p>Step 5. This will then be put into the model, into the versioned address book.</p>
+</div>
 </div>
 </div>
 <div class="sect2">
@@ -2628,4 +2656,4 @@ Expected: Similar to previous.</p>
 </div>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-11-12 14:59:11 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-11-12 16:08:06 UTC</div></div></div></body></html>
